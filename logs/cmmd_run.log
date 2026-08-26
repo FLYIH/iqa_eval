@@ -1,0 +1,193 @@
+Discovering views...
+Found 9 scenes, 246 views total
+Building file records (methods=ALL)...
+Total (method,rate,view) records: 2952
+Computing CLIP embeddings for all fake + reference images (cached per image)...
+Loading weights:   0%|          | 0/392 [00:00<?, ?it/s]Loading weights: 100%|██████████| 392/392 [00:00<00:00, 11340.10it/s]
+[transformers] [1mCLIPVisionModelWithProjection LOAD REPORT[0m from: openai/clip-vit-large-patch14-336
+Key                                                          | Status     |  | 
+-------------------------------------------------------------+------------+--+-
+text_model.encoder.layers.{0...11}.mlp.fc2.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc1.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm1.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.out_proj.weight | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm2.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc2.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc1.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+logit_scale                                                  | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm2.bias          | UNEXPECTED |  | 
+text_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm1.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+text_model.final_layer_norm.weight                           | UNEXPECTED |  | 
+text_projection.weight                                       | UNEXPECTED |  | 
+text_model.final_layer_norm.bias                             | UNEXPECTED |  | 
+text_model.embeddings.token_embedding.weight                 | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  ref embeddings [50/246]
+  ref embeddings [100/246]
+  ref embeddings [150/246]
+  ref embeddings [200/246]
+  ref embeddings [246/246]
+  fake embeddings [100/2952]
+  fake embeddings [200/2952]
+  fake embeddings [300/2952]
+  fake embeddings [400/2952]
+  fake embeddings [500/2952]
+  fake embeddings [600/2952]
+  fake embeddings [700/2952]
+  fake embeddings [800/2952]
+  fake embeddings [900/2952]
+  fake embeddings [1000/2952]
+  fake embeddings [1100/2952]
+  fake embeddings [1200/2952]
+  fake embeddings [1300/2952]
+  fake embeddings [1400/2952]
+  fake embeddings [1500/2952]
+  fake embeddings [1600/2952]
+  fake embeddings [1700/2952]
+  fake embeddings [1800/2952]
+  fake embeddings [1900/2952]
+  fake embeddings [2000/2952]
+  fake embeddings [2100/2952]
+  fake embeddings [2200/2952]
+  fake embeddings [2300/2952]
+  fake embeddings [2400/2952]
+  fake embeddings [2500/2952]
+  fake embeddings [2600/2952]
+  fake embeddings [2700/2952]
+  fake embeddings [2800/2952]
+  fake embeddings [2900/2952]
+  fake embeddings [2952/2952]
+Computing CMMD per (method, rate, scene) and pooled...
+Pooled reference: 246 images
+  CMMD[3DCR/high/bicycle] = 0.0448  (n_fake=25, n_ref=25)
+  CMMD[Orig/high/bicycle] = 0.3185  (n_fake=25, n_ref=25)
+  CMMD[HACplus+CR/high/bicycle] = 0.0705  (n_fake=25, n_ref=25)
+  CMMD[HAC_ori/high/bicycle] = 0.3079  (n_fake=25, n_ref=25)
+  CMMD[3DCR/mid/bicycle] = 0.0608  (n_fake=25, n_ref=25)
+  CMMD[Orig/mid/bicycle] = 0.4146  (n_fake=25, n_ref=25)
+  CMMD[HACplus+CR/mid/bicycle] = 0.0633  (n_fake=25, n_ref=25)
+  CMMD[HAC_ori/mid/bicycle] = 0.3403  (n_fake=25, n_ref=25)
+  CMMD[3DCR/low/bicycle] = 0.0670  (n_fake=25, n_ref=25)
+  CMMD[Orig/low/bicycle] = 0.9125  (n_fake=25, n_ref=25)
+  CMMD[HACplus+CR/low/bicycle] = 0.0829  (n_fake=25, n_ref=25)
+  CMMD[HAC_ori/low/bicycle] = 0.6543  (n_fake=25, n_ref=25)
+  CMMD[3DCR/high/bonsai] = 0.0588  (n_fake=37, n_ref=37)
+  CMMD[Orig/high/bonsai] = 0.2433  (n_fake=37, n_ref=37)
+  CMMD[HACplus+CR/high/bonsai] = 0.0536  (n_fake=37, n_ref=37)
+  CMMD[HAC_ori/high/bonsai] = 0.2111  (n_fake=37, n_ref=37)
+  CMMD[3DCR/mid/bonsai] = 0.0861  (n_fake=37, n_ref=37)
+  CMMD[Orig/mid/bonsai] = 0.3701  (n_fake=37, n_ref=37)
+  CMMD[HACplus+CR/mid/bonsai] = 0.0620  (n_fake=37, n_ref=37)
+  CMMD[HAC_ori/mid/bonsai] = 0.2548  (n_fake=37, n_ref=37)
+  CMMD[3DCR/low/bonsai] = 0.1228  (n_fake=37, n_ref=37)
+  CMMD[Orig/low/bonsai] = 0.5962  (n_fake=37, n_ref=37)
+  CMMD[HACplus+CR/low/bonsai] = 0.0896  (n_fake=37, n_ref=37)
+  CMMD[HAC_ori/low/bonsai] = 0.4628  (n_fake=37, n_ref=37)
+  CMMD[3DCR/high/counter] = 0.0334  (n_fake=30, n_ref=30)
+  CMMD[Orig/high/counter] = 0.2106  (n_fake=30, n_ref=30)
+  CMMD[HACplus+CR/high/counter] = 0.0305  (n_fake=30, n_ref=30)
+  CMMD[HAC_ori/high/counter] = 0.1739  (n_fake=30, n_ref=30)
+  CMMD[3DCR/mid/counter] = 0.0381  (n_fake=30, n_ref=30)
+  CMMD[Orig/mid/counter] = 0.2655  (n_fake=30, n_ref=30)
+  CMMD[HACplus+CR/mid/counter] = 0.0392  (n_fake=30, n_ref=30)
+  CMMD[HAC_ori/mid/counter] = 0.1920  (n_fake=30, n_ref=30)
+  CMMD[3DCR/low/counter] = 0.0689  (n_fake=30, n_ref=30)
+  CMMD[Orig/low/counter] = 0.4863  (n_fake=30, n_ref=30)
+  CMMD[HACplus+CR/low/counter] = 0.0371  (n_fake=30, n_ref=30)
+  CMMD[HAC_ori/low/counter] = 0.4851  (n_fake=30, n_ref=30)
+  CMMD[3DCR/high/flowers] = 0.0798  (n_fake=22, n_ref=22)
+  CMMD[Orig/high/flowers] = 1.0217  (n_fake=22, n_ref=22)
+  CMMD[HACplus+CR/high/flowers] = 0.1153  (n_fake=22, n_ref=22)
+  CMMD[HAC_ori/high/flowers] = 1.0331  (n_fake=22, n_ref=22)
+  CMMD[3DCR/mid/flowers] = 0.0855  (n_fake=22, n_ref=22)
+  CMMD[Orig/mid/flowers] = 1.3326  (n_fake=22, n_ref=22)
+  CMMD[HACplus+CR/mid/flowers] = 0.1093  (n_fake=22, n_ref=22)
+  CMMD[HAC_ori/mid/flowers] = 1.2023  (n_fake=22, n_ref=22)
+  CMMD[3DCR/low/flowers] = 0.1539  (n_fake=22, n_ref=22)
+  CMMD[Orig/low/flowers] = 1.8754  (n_fake=22, n_ref=22)
+  CMMD[HACplus+CR/low/flowers] = 0.1936  (n_fake=22, n_ref=22)
+  CMMD[HAC_ori/low/flowers] = 1.7086  (n_fake=22, n_ref=22)
+  CMMD[3DCR/high/garden] = 0.0073  (n_fake=24, n_ref=24)
+  CMMD[Orig/high/garden] = 0.0862  (n_fake=24, n_ref=24)
+  CMMD[HACplus+CR/high/garden] = 0.0070  (n_fake=24, n_ref=24)
+  CMMD[HAC_ori/high/garden] = 0.0783  (n_fake=24, n_ref=24)
+  CMMD[3DCR/mid/garden] = 0.0107  (n_fake=24, n_ref=24)
+  CMMD[Orig/mid/garden] = 0.1894  (n_fake=24, n_ref=24)
+  CMMD[HACplus+CR/mid/garden] = 0.0079  (n_fake=24, n_ref=24)
+  CMMD[HAC_ori/mid/garden] = 0.1107  (n_fake=24, n_ref=24)
+  CMMD[3DCR/low/garden] = 0.0194  (n_fake=24, n_ref=24)
+  CMMD[Orig/low/garden] = 0.6073  (n_fake=24, n_ref=24)
+  CMMD[HACplus+CR/low/garden] = 0.0310  (n_fake=24, n_ref=24)
+  CMMD[HAC_ori/low/garden] = 0.3436  (n_fake=24, n_ref=24)
+  CMMD[3DCR/high/kitchen] = 0.0123  (n_fake=35, n_ref=35)
+  CMMD[Orig/high/kitchen] = 0.1794  (n_fake=35, n_ref=35)
+  CMMD[HACplus+CR/high/kitchen] = 0.0136  (n_fake=35, n_ref=35)
+  CMMD[HAC_ori/high/kitchen] = 0.1385  (n_fake=35, n_ref=35)
+  CMMD[3DCR/mid/kitchen] = 0.0496  (n_fake=35, n_ref=35)
+  CMMD[Orig/mid/kitchen] = 0.2673  (n_fake=35, n_ref=35)
+  CMMD[HACplus+CR/mid/kitchen] = 0.0265  (n_fake=35, n_ref=35)
+  CMMD[HAC_ori/mid/kitchen] = 0.1386  (n_fake=35, n_ref=35)
+  CMMD[3DCR/low/kitchen] = 0.0678  (n_fake=35, n_ref=35)
+  CMMD[Orig/low/kitchen] = 0.3438  (n_fake=35, n_ref=35)
+  CMMD[HACplus+CR/low/kitchen] = 0.0477  (n_fake=35, n_ref=35)
+  CMMD[HAC_ori/low/kitchen] = 0.2731  (n_fake=35, n_ref=35)
+  CMMD[3DCR/high/room] = 0.0345  (n_fake=39, n_ref=39)
+  CMMD[Orig/high/room] = 0.1823  (n_fake=39, n_ref=39)
+  CMMD[HACplus+CR/high/room] = 0.0291  (n_fake=39, n_ref=39)
+  CMMD[HAC_ori/high/room] = 0.1549  (n_fake=39, n_ref=39)
+  CMMD[3DCR/mid/room] = 0.0511  (n_fake=39, n_ref=39)
+  CMMD[Orig/mid/room] = 0.3773  (n_fake=39, n_ref=39)
+  CMMD[HACplus+CR/mid/room] = 0.0317  (n_fake=39, n_ref=39)
+  CMMD[HAC_ori/mid/room] = 0.1850  (n_fake=39, n_ref=39)
+  CMMD[3DCR/low/room] = 0.0979  (n_fake=39, n_ref=39)
+  CMMD[Orig/low/room] = 0.7064  (n_fake=39, n_ref=39)
+  CMMD[HACplus+CR/low/room] = 0.0489  (n_fake=39, n_ref=39)
+  CMMD[HAC_ori/low/room] = 0.4886  (n_fake=39, n_ref=39)
+  CMMD[3DCR/high/stump] = 0.0771  (n_fake=16, n_ref=16)
+  CMMD[Orig/high/stump] = 0.3908  (n_fake=16, n_ref=16)
+  CMMD[HACplus+CR/high/stump] = 0.0671  (n_fake=16, n_ref=16)
+  CMMD[HAC_ori/high/stump] = 0.3608  (n_fake=16, n_ref=16)
+  CMMD[3DCR/mid/stump] = 0.0806  (n_fake=16, n_ref=16)
+  CMMD[Orig/mid/stump] = 0.8185  (n_fake=16, n_ref=16)
+  CMMD[HACplus+CR/mid/stump] = 0.0660  (n_fake=16, n_ref=16)
+  CMMD[HAC_ori/mid/stump] = 0.4364  (n_fake=16, n_ref=16)
+  CMMD[3DCR/low/stump] = 0.1793  (n_fake=16, n_ref=16)
+  CMMD[Orig/low/stump] = 1.3688  (n_fake=16, n_ref=16)
+  CMMD[HACplus+CR/low/stump] = 0.0888  (n_fake=16, n_ref=16)
+  CMMD[HAC_ori/low/stump] = 0.8503  (n_fake=16, n_ref=16)
+  CMMD[3DCR/high/treehill] = 0.1030  (n_fake=18, n_ref=18)
+  CMMD[Orig/high/treehill] = 0.7639  (n_fake=18, n_ref=18)
+  CMMD[HACplus+CR/high/treehill] = 0.0997  (n_fake=18, n_ref=18)
+  CMMD[HAC_ori/high/treehill] = 0.7671  (n_fake=18, n_ref=18)
+  CMMD[3DCR/mid/treehill] = 0.1065  (n_fake=18, n_ref=18)
+  CMMD[Orig/mid/treehill] = 1.0039  (n_fake=18, n_ref=18)
+  CMMD[HACplus+CR/mid/treehill] = 0.1069  (n_fake=18, n_ref=18)
+  CMMD[HAC_ori/mid/treehill] = 0.8582  (n_fake=18, n_ref=18)
+  CMMD[3DCR/low/treehill] = 0.1999  (n_fake=18, n_ref=18)
+  CMMD[Orig/low/treehill] = 1.6190  (n_fake=18, n_ref=18)
+  CMMD[HACplus+CR/low/treehill] = 0.1546  (n_fake=18, n_ref=18)
+  CMMD[HAC_ori/low/treehill] = 1.3547  (n_fake=18, n_ref=18)
+  CMMD[3DCR/high/ALL_SCENES] = 0.0104  (n_fake=246, n_ref=246)
+  CMMD[Orig/high/ALL_SCENES] = 0.1489  (n_fake=246, n_ref=246)
+  CMMD[HACplus+CR/high/ALL_SCENES] = 0.0108  (n_fake=246, n_ref=246)
+  CMMD[HAC_ori/high/ALL_SCENES] = 0.1318  (n_fake=246, n_ref=246)
+  CMMD[3DCR/mid/ALL_SCENES] = 0.0131  (n_fake=246, n_ref=246)
+  CMMD[Orig/mid/ALL_SCENES] = 0.2365  (n_fake=246, n_ref=246)
+  CMMD[HACplus+CR/mid/ALL_SCENES] = 0.0123  (n_fake=246, n_ref=246)
+  CMMD[HAC_ori/mid/ALL_SCENES] = 0.1546  (n_fake=246, n_ref=246)
+  CMMD[3DCR/low/ALL_SCENES] = 0.0242  (n_fake=246, n_ref=246)
+  CMMD[Orig/low/ALL_SCENES] = 0.4133  (n_fake=246, n_ref=246)
+  CMMD[HACplus+CR/low/ALL_SCENES] = 0.0178  (n_fake=246, n_ref=246)
+  CMMD[HAC_ori/low/ALL_SCENES] = 0.3093  (n_fake=246, n_ref=246)
+Wrote /home/u4546465/iqa_eval/results/cmmd_per_scene.csv
+Wrote /home/u4546465/iqa_eval/results/cmmd_summary.csv

@@ -1,0 +1,185 @@
+/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+Discovering views...
+Found 9 scenes, 246 views total
+Building file records (methods=ALL)...
+Total (method,rate,view) records: 2952 (each -> 10 five-crop+flip sub-images)
+Computing five-crop Inception (FID) + CLIP (CMMD) features for all fake + reference images...
+Loading pretrained model Inception3 from /home/u4546465/.cache/torch/hub/pyiqa/pt_inception-2015-12-05-6726825d.pth
+Loading weights:   0%|          | 0/392 [00:00<?, ?it/s]Loading weights: 100%|██████████| 392/392 [00:00<00:00, 9703.59it/s]
+[transformers] [1mCLIPVisionModelWithProjection LOAD REPORT[0m from: openai/clip-vit-large-patch14-336
+Key                                                          | Status     |  | 
+-------------------------------------------------------------+------------+--+-
+text_model.encoder.layers.{0...11}.mlp.fc2.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc2.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm1.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm2.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc1.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc1.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm1.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.out_proj.weight | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm2.weight        | UNEXPECTED |  | 
+text_projection.weight                                       | UNEXPECTED |  | 
+text_model.final_layer_norm.bias                             | UNEXPECTED |  | 
+text_model.final_layer_norm.weight                           | UNEXPECTED |  | 
+text_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+text_model.embeddings.token_embedding.weight                 | UNEXPECTED |  | 
+logit_scale                                                  | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  ref crops+features [50/246]
+  ref crops+features [100/246]
+  ref crops+features [150/246]
+  ref crops+features [200/246]
+  ref crops+features [246/246]
+  fake crops+features [100/2952]
+  fake crops+features [200/2952]
+  fake crops+features [300/2952]
+  fake crops+features [400/2952]
+  fake crops+features [500/2952]
+  fake crops+features [600/2952]
+  fake crops+features [700/2952]
+  fake crops+features [800/2952]
+  fake crops+features [900/2952]
+  fake crops+features [1000/2952]
+  fake crops+features [1100/2952]
+  fake crops+features [1200/2952]
+  fake crops+features [1300/2952]
+  fake crops+features [1400/2952]
+  fake crops+features [1500/2952]
+  fake crops+features [1600/2952]
+  fake crops+features [1700/2952]
+  fake crops+features [1800/2952]
+  fake crops+features [1900/2952]
+  fake crops+features [2000/2952]
+  fake crops+features [2100/2952]
+  fake crops+features [2200/2952]
+  fake crops+features [2300/2952]
+  fake crops+features [2400/2952]
+  fake crops+features [2500/2952]
+  fake crops+features [2600/2952]
+  fake crops+features [2700/2952]
+  fake crops+features [2800/2952]
+  fake crops+features [2900/2952]
+  fake crops+features [2952/2952]
+Computing per-scene FID + CMMD...
+  [3DCR/high/bicycle] FID=7.7586  CMMD=0.0309  (n_fake_crops=250, n_ref_crops=250)
+  [Orig/high/bicycle] FID=13.8958  CMMD=0.2558  (n_fake_crops=250, n_ref_crops=250)
+  [HACplus+CR/high/bicycle] FID=7.7511  CMMD=0.0451  (n_fake_crops=250, n_ref_crops=250)
+  [HAC_ori/high/bicycle] FID=12.4324  CMMD=0.2235  (n_fake_crops=250, n_ref_crops=250)
+  [3DCR/mid/bicycle] FID=9.0152  CMMD=0.0359  (n_fake_crops=250, n_ref_crops=250)
+  [Orig/mid/bicycle] FID=18.4101  CMMD=0.4015  (n_fake_crops=250, n_ref_crops=250)
+  [HACplus+CR/mid/bicycle] FID=8.3143  CMMD=0.0393  (n_fake_crops=250, n_ref_crops=250)
+  [HAC_ori/mid/bicycle] FID=14.8746  CMMD=0.2861  (n_fake_crops=250, n_ref_crops=250)
+  [3DCR/low/bicycle] FID=9.9946  CMMD=0.0494  (n_fake_crops=250, n_ref_crops=250)
+  [Orig/low/bicycle] FID=37.7091  CMMD=0.9984  (n_fake_crops=250, n_ref_crops=250)
+  [HACplus+CR/low/bicycle] FID=9.4559  CMMD=0.0579  (n_fake_crops=250, n_ref_crops=250)
+  [HAC_ori/low/bicycle] FID=27.8374  CMMD=0.7778  (n_fake_crops=250, n_ref_crops=250)
+  [3DCR/high/bonsai] FID=13.2616  CMMD=0.0529  (n_fake_crops=370, n_ref_crops=370)
+  [Orig/high/bonsai] FID=28.3342  CMMD=0.2766  (n_fake_crops=370, n_ref_crops=370)
+  [HACplus+CR/high/bonsai] FID=12.8079  CMMD=0.0627  (n_fake_crops=370, n_ref_crops=370)
+  [HAC_ori/high/bonsai] FID=25.8203  CMMD=0.2507  (n_fake_crops=370, n_ref_crops=370)
+  [3DCR/mid/bonsai] FID=16.6539  CMMD=0.0945  (n_fake_crops=370, n_ref_crops=370)
+  [Orig/mid/bonsai] FID=36.5928  CMMD=0.4084  (n_fake_crops=370, n_ref_crops=370)
+  [HACplus+CR/mid/bonsai] FID=14.0014  CMMD=0.0744  (n_fake_crops=370, n_ref_crops=370)
+  [HAC_ori/mid/bonsai] FID=28.1225  CMMD=0.3028  (n_fake_crops=370, n_ref_crops=370)
+  [3DCR/low/bonsai] FID=21.1900  CMMD=0.1460  (n_fake_crops=370, n_ref_crops=370)
+  [Orig/low/bonsai] FID=47.1187  CMMD=0.6303  (n_fake_crops=370, n_ref_crops=370)
+  [HACplus+CR/low/bonsai] FID=18.1330  CMMD=0.1007  (n_fake_crops=370, n_ref_crops=370)
+  [HAC_ori/low/bonsai] FID=40.3589  CMMD=0.5268  (n_fake_crops=370, n_ref_crops=370)
+  [3DCR/high/counter] FID=22.8587  CMMD=0.0262  (n_fake_crops=300, n_ref_crops=300)
+  [Orig/high/counter] FID=46.4086  CMMD=0.1997  (n_fake_crops=300, n_ref_crops=300)
+  [HACplus+CR/high/counter] FID=22.4349  CMMD=0.0237  (n_fake_crops=300, n_ref_crops=300)
+  [HAC_ori/high/counter] FID=43.9960  CMMD=0.1738  (n_fake_crops=300, n_ref_crops=300)
+  [3DCR/mid/counter] FID=27.2235  CMMD=0.0540  (n_fake_crops=300, n_ref_crops=300)
+  [Orig/mid/counter] FID=63.1126  CMMD=0.3508  (n_fake_crops=300, n_ref_crops=300)
+  [HACplus+CR/mid/counter] FID=30.9577  CMMD=0.0474  (n_fake_crops=300, n_ref_crops=300)
+  [HAC_ori/mid/counter] FID=50.7412  CMMD=0.2043  (n_fake_crops=300, n_ref_crops=300)
+  [3DCR/low/counter] FID=35.6636  CMMD=0.1361  (n_fake_crops=300, n_ref_crops=300)
+  [Orig/low/counter] FID=84.9953  CMMD=0.7942  (n_fake_crops=300, n_ref_crops=300)
+  [HACplus+CR/low/counter] FID=31.2681  CMMD=0.0914  (n_fake_crops=300, n_ref_crops=300)
+  [HAC_ori/low/counter] FID=87.2209  CMMD=0.7845  (n_fake_crops=300, n_ref_crops=300)
+  [3DCR/high/flowers] FID=22.8196  CMMD=0.0391  (n_fake_crops=220, n_ref_crops=220)
+  [Orig/high/flowers] FID=80.5615  CMMD=0.9478  (n_fake_crops=220, n_ref_crops=220)
+  [HACplus+CR/high/flowers] FID=22.8757  CMMD=0.0645  (n_fake_crops=220, n_ref_crops=220)
+  [HAC_ori/high/flowers] FID=79.7875  CMMD=1.0066  (n_fake_crops=220, n_ref_crops=220)
+  [3DCR/mid/flowers] FID=25.0084  CMMD=0.0587  (n_fake_crops=220, n_ref_crops=220)
+  [Orig/mid/flowers] FID=93.9192  CMMD=1.3056  (n_fake_crops=220, n_ref_crops=220)
+  [HACplus+CR/mid/flowers] FID=24.9737  CMMD=0.0669  (n_fake_crops=220, n_ref_crops=220)
+  [HAC_ori/mid/flowers] FID=84.3129  CMMD=1.1697  (n_fake_crops=220, n_ref_crops=220)
+  [3DCR/low/flowers] FID=29.4209  CMMD=0.0789  (n_fake_crops=220, n_ref_crops=220)
+  [Orig/low/flowers] FID=110.9547  CMMD=1.8595  (n_fake_crops=220, n_ref_crops=220)
+  [HACplus+CR/low/flowers] FID=28.3839  CMMD=0.1098  (n_fake_crops=220, n_ref_crops=220)
+  [HAC_ori/low/flowers] FID=109.8572  CMMD=1.7658  (n_fake_crops=220, n_ref_crops=220)
+  [3DCR/high/garden] FID=9.7653  CMMD=0.0063  (n_fake_crops=240, n_ref_crops=240)
+  [Orig/high/garden] FID=13.1038  CMMD=0.1173  (n_fake_crops=240, n_ref_crops=240)
+  [HACplus+CR/high/garden] FID=9.7283  CMMD=0.0055  (n_fake_crops=240, n_ref_crops=240)
+  [HAC_ori/high/garden] FID=13.2436  CMMD=0.1155  (n_fake_crops=240, n_ref_crops=240)
+  [3DCR/mid/garden] FID=11.6106  CMMD=0.0155  (n_fake_crops=240, n_ref_crops=240)
+  [Orig/mid/garden] FID=19.0274  CMMD=0.2373  (n_fake_crops=240, n_ref_crops=240)
+  [HACplus+CR/mid/garden] FID=10.9190  CMMD=0.0089  (n_fake_crops=240, n_ref_crops=240)
+  [HAC_ori/mid/garden] FID=15.2880  CMMD=0.1502  (n_fake_crops=240, n_ref_crops=240)
+  [3DCR/low/garden] FID=14.2693  CMMD=0.0434  (n_fake_crops=240, n_ref_crops=240)
+  [Orig/low/garden] FID=28.3860  CMMD=0.5250  (n_fake_crops=240, n_ref_crops=240)
+  [HACplus+CR/low/garden] FID=13.1298  CMMD=0.0328  (n_fake_crops=240, n_ref_crops=240)
+  [HAC_ori/low/garden] FID=29.5159  CMMD=0.4542  (n_fake_crops=240, n_ref_crops=240)
+  [3DCR/high/kitchen] FID=10.3222  CMMD=0.0157  (n_fake_crops=350, n_ref_crops=350)
+  [Orig/high/kitchen] FID=12.3512  CMMD=0.1953  (n_fake_crops=350, n_ref_crops=350)
+  [HACplus+CR/high/kitchen] FID=9.8760  CMMD=0.0181  (n_fake_crops=350, n_ref_crops=350)
+  [HAC_ori/high/kitchen] FID=11.6242  CMMD=0.1639  (n_fake_crops=350, n_ref_crops=350)
+  [3DCR/mid/kitchen] FID=13.4512  CMMD=0.0339  (n_fake_crops=350, n_ref_crops=350)
+  [Orig/mid/kitchen] FID=19.2865  CMMD=0.2662  (n_fake_crops=350, n_ref_crops=350)
+  [HACplus+CR/mid/kitchen] FID=11.1543  CMMD=0.0236  (n_fake_crops=350, n_ref_crops=350)
+  [HAC_ori/mid/kitchen] FID=13.9780  CMMD=0.1915  (n_fake_crops=350, n_ref_crops=350)
+  [3DCR/low/kitchen] FID=17.2385  CMMD=0.0467  (n_fake_crops=350, n_ref_crops=350)
+  [Orig/low/kitchen] FID=31.0663  CMMD=0.3303  (n_fake_crops=350, n_ref_crops=350)
+  [HACplus+CR/low/kitchen] FID=15.9539  CMMD=0.0410  (n_fake_crops=350, n_ref_crops=350)
+  [HAC_ori/low/kitchen] FID=27.8659  CMMD=0.3061  (n_fake_crops=350, n_ref_crops=350)
+  [3DCR/high/room] FID=15.4981  CMMD=0.0483  (n_fake_crops=390, n_ref_crops=390)
+  [Orig/high/room] FID=31.5282  CMMD=0.2054  (n_fake_crops=390, n_ref_crops=390)
+  [HACplus+CR/high/room] FID=13.4753  CMMD=0.0343  (n_fake_crops=390, n_ref_crops=390)
+  [HAC_ori/high/room] FID=28.0984  CMMD=0.1875  (n_fake_crops=390, n_ref_crops=390)
+  [3DCR/mid/room] FID=17.8425  CMMD=0.0663  (n_fake_crops=390, n_ref_crops=390)
+  [Orig/mid/room] FID=53.9823  CMMD=0.3985  (n_fake_crops=390, n_ref_crops=390)
+  [HACplus+CR/mid/room] FID=15.0438  CMMD=0.0404  (n_fake_crops=390, n_ref_crops=390)
+  [HAC_ori/mid/room] FID=34.5086  CMMD=0.2316  (n_fake_crops=390, n_ref_crops=390)
+  [3DCR/low/room] FID=24.9153  CMMD=0.1370  (n_fake_crops=390, n_ref_crops=390)
+  [Orig/low/room] FID=86.5381  CMMD=0.7271  (n_fake_crops=390, n_ref_crops=390)
+  [HACplus+CR/low/room] FID=20.3624  CMMD=0.0744  (n_fake_crops=390, n_ref_crops=390)
+  [HAC_ori/low/room] FID=73.9605  CMMD=0.5639  (n_fake_crops=390, n_ref_crops=390)
+  [3DCR/high/stump] FID=34.9800  CMMD=0.0594  (n_fake_crops=160, n_ref_crops=160)
+  [Orig/high/stump] FID=60.6602  CMMD=0.3431  (n_fake_crops=160, n_ref_crops=160)
+  [HACplus+CR/high/stump] FID=34.2323  CMMD=0.0435  (n_fake_crops=160, n_ref_crops=160)
+  [HAC_ori/high/stump] FID=54.6193  CMMD=0.3182  (n_fake_crops=160, n_ref_crops=160)
+  [3DCR/mid/stump] FID=37.9432  CMMD=0.0833  (n_fake_crops=160, n_ref_crops=160)
+  [Orig/mid/stump] FID=106.7050  CMMD=0.6946  (n_fake_crops=160, n_ref_crops=160)
+  [HACplus+CR/mid/stump] FID=32.8381  CMMD=0.0403  (n_fake_crops=160, n_ref_crops=160)
+  [HAC_ori/mid/stump] FID=66.3880  CMMD=0.3933  (n_fake_crops=160, n_ref_crops=160)
+  [3DCR/low/stump] FID=46.1211  CMMD=0.2142  (n_fake_crops=160, n_ref_crops=160)
+  [Orig/low/stump] FID=176.8978  CMMD=1.3877  (n_fake_crops=160, n_ref_crops=160)
+  [HACplus+CR/low/stump] FID=38.9681  CMMD=0.0975  (n_fake_crops=160, n_ref_crops=160)
+  [HAC_ori/low/stump] FID=129.7953  CMMD=0.8671  (n_fake_crops=160, n_ref_crops=160)
+  [3DCR/high/treehill] FID=14.6095  CMMD=0.0559  (n_fake_crops=180, n_ref_crops=180)
+  [Orig/high/treehill] FID=34.5900  CMMD=0.7730  (n_fake_crops=180, n_ref_crops=180)
+  [HACplus+CR/high/treehill] FID=14.5768  CMMD=0.0544  (n_fake_crops=180, n_ref_crops=180)
+  [HAC_ori/high/treehill] FID=35.7291  CMMD=0.7564  (n_fake_crops=180, n_ref_crops=180)
+  [3DCR/mid/treehill] FID=15.6833  CMMD=0.0774  (n_fake_crops=180, n_ref_crops=180)
+  [Orig/mid/treehill] FID=52.1465  CMMD=1.0160  (n_fake_crops=180, n_ref_crops=180)
+  [HACplus+CR/mid/treehill] FID=15.7246  CMMD=0.0589  (n_fake_crops=180, n_ref_crops=180)
+  [HAC_ori/mid/treehill] FID=39.3134  CMMD=0.8461  (n_fake_crops=180, n_ref_crops=180)
+  [3DCR/low/treehill] FID=20.0580  CMMD=0.1220  (n_fake_crops=180, n_ref_crops=180)
+  [Orig/low/treehill] FID=87.2530  CMMD=1.5823  (n_fake_crops=180, n_ref_crops=180)
+  [HACplus+CR/low/treehill] FID=21.1724  CMMD=0.1132  (n_fake_crops=180, n_ref_crops=180)
+  [HAC_ori/low/treehill] FID=72.8124  CMMD=1.3940  (n_fake_crops=180, n_ref_crops=180)
+Wrote /home/u4546465/iqa_eval/results/fivecrop_per_scene.csv
+Wrote /home/u4546465/iqa_eval/results/fivecrop_summary.csv

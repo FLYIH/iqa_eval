@@ -1,0 +1,207 @@
+/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+Discovering views...
+Found 9 scenes, 246 views total: {'bicycle': 25, 'bonsai': 37, 'counter': 30, 'flowers': 22, 'garden': 24, 'kitchen': 35, 'room': 39, 'stump': 16, 'treehill': 18}
+Building file records (methods={'HAC_ori'})...
+Total (method,rate,view) records: 738
+Computing NR metrics ['musiq', 'maniqa', 'clipiqa', 'niqe'] on device=cuda ...
+Loading pretrained model MUSIQ from /home/u4546465/.cache/torch/hub/pyiqa/musiq_koniq_ckpt-e95806b9.pth
+Loading pretrained model MANIQA from /home/u4546465/.cache/torch/hub/pyiqa/ckpt_koniq10k.pt
+  NR metrics [100/738]
+  NR metrics [200/738]
+  NR metrics [300/738]
+  NR metrics [400/738]
+  NR metrics [500/738]
+  NR metrics [600/738]
+  NR metrics [700/738]
+  NR metrics [738/738]
+Building symlink tree for FID...
+Computing per-scene FID...
+Loading pretrained model Inception3 from /home/u4546465/.cache/torch/hub/pyiqa/pt_inception-2015-12-05-6726825d.pth
+Computing FID between two folders
+Found 25 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/high/bicycle
+FID bicycle:   0%|          | 0/4 [00:00<?, ?it/s]FID bicycle:  25%|██▌       | 1/4 [00:01<00:03,  1.32s/it]FID bicycle: 100%|██████████| 4/4 [00:01<00:00,  2.73it/s]
+Found 25 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref/bicycle
+FID bicycle:   0%|          | 0/4 [00:00<?, ?it/s]FID bicycle:  25%|██▌       | 1/4 [00:01<00:03,  1.29s/it]FID bicycle: 100%|██████████| 4/4 [00:01<00:00,  2.89it/s]
+  FID[HAC_ori/high/bicycle] = 12.7015
+Computing FID between two folders
+Found 37 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/high/bonsai
+FID bonsai:   0%|          | 0/5 [00:00<?, ?it/s]FID bonsai:  20%|██        | 1/5 [00:01<00:04,  1.20s/it]FID bonsai:  60%|██████    | 3/5 [00:01<00:00,  2.78it/s]FID bonsai: 100%|██████████| 5/5 [00:01<00:00,  4.37it/s]FID bonsai: 100%|██████████| 5/5 [00:01<00:00,  3.17it/s]
+Found 37 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref/bonsai
+FID bonsai:   0%|          | 0/5 [00:00<?, ?it/s]FID bonsai:  20%|██        | 1/5 [00:01<00:05,  1.32s/it]FID bonsai:  80%|████████  | 4/5 [00:01<00:00,  3.46it/s]FID bonsai: 100%|██████████| 5/5 [00:01<00:00,  2.78it/s]
+  FID[HAC_ori/high/bonsai] = 24.9677
+Computing FID between two folders
+Found 30 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/high/counter
+FID counter:   0%|          | 0/4 [00:00<?, ?it/s]FID counter:  25%|██▌       | 1/4 [00:01<00:03,  1.11s/it]FID counter: 100%|██████████| 4/4 [00:01<00:00,  4.15it/s]FID counter: 100%|██████████| 4/4 [00:01<00:00,  3.14it/s]
+Found 30 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref/counter
+FID counter:   0%|          | 0/4 [00:00<?, ?it/s]FID counter:  25%|██▌       | 1/4 [00:01<00:04,  1.37s/it]FID counter: 100%|██████████| 4/4 [00:01<00:00,  2.70it/s]
+  FID[HAC_ori/high/counter] = 44.3768
+Computing FID between two folders
+Found 22 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/high/flowers
+FID flowers:   0%|          | 0/3 [00:00<?, ?it/s]FID flowers:  33%|███▎      | 1/3 [00:01<00:02,  1.22s/it]FID flowers: 100%|██████████| 3/3 [00:01<00:00,  2.24it/s]
+Found 22 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref/flowers
+FID flowers:   0%|          | 0/3 [00:00<?, ?it/s]FID flowers:  33%|███▎      | 1/3 [00:01<00:02,  1.26s/it]FID flowers: 100%|██████████| 3/3 [00:01<00:00,  2.24it/s]
+  FID[HAC_ori/high/flowers] = 57.7515
+Computing FID between two folders
+Found 24 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/high/garden
+FID garden:   0%|          | 0/3 [00:00<?, ?it/s]FID garden:  33%|███▎      | 1/3 [00:01<00:02,  1.19s/it]FID garden: 100%|██████████| 3/3 [00:01<00:00,  2.37it/s]
+Found 24 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref/garden
+FID garden:   0%|          | 0/3 [00:00<?, ?it/s]FID garden:  33%|███▎      | 1/3 [00:01<00:02,  1.22s/it]FID garden: 100%|██████████| 3/3 [00:01<00:00,  2.26it/s]
+  FID[HAC_ori/high/garden] = 12.7154
+Computing FID between two folders
+Found 35 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/high/kitchen
+FID kitchen:   0%|          | 0/5 [00:00<?, ?it/s]FID kitchen:  20%|██        | 1/5 [00:01<00:05,  1.25s/it]FID kitchen:  80%|████████  | 4/5 [00:01<00:00,  3.59it/s]FID kitchen: 100%|██████████| 5/5 [00:01<00:00,  3.10it/s]
+Found 35 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref/kitchen
+FID kitchen:   0%|          | 0/5 [00:00<?, ?it/s]FID kitchen:  20%|██        | 1/5 [00:01<00:04,  1.24s/it]FID kitchen:  60%|██████    | 3/5 [00:01<00:00,  2.70it/s]FID kitchen: 100%|██████████| 5/5 [00:01<00:00,  4.66it/s]FID kitchen: 100%|██████████| 5/5 [00:01<00:00,  3.24it/s]
+  FID[HAC_ori/high/kitchen] = 10.2301
+Computing FID between two folders
+Found 39 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/high/room
+FID room:   0%|          | 0/5 [00:00<?, ?it/s]FID room:  20%|██        | 1/5 [00:01<00:04,  1.09s/it]FID room:  60%|██████    | 3/5 [00:01<00:00,  3.11it/s]FID room: 100%|██████████| 5/5 [00:01<00:00,  4.14it/s]FID room: 100%|██████████| 5/5 [00:01<00:00,  3.16it/s]
+Found 39 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref/room
+FID room:   0%|          | 0/5 [00:00<?, ?it/s]FID room:  20%|██        | 1/5 [00:01<00:05,  1.26s/it]FID room:  80%|████████  | 4/5 [00:01<00:00,  3.77it/s]FID room: 100%|██████████| 5/5 [00:01<00:00,  2.60it/s]
+  FID[HAC_ori/high/room] = 21.0203
+Computing FID between two folders
+Found 16 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/high/stump
+FID stump:   0%|          | 0/2 [00:00<?, ?it/s]FID stump:  50%|█████     | 1/2 [00:01<00:01,  1.27s/it]FID stump: 100%|██████████| 2/2 [00:01<00:00,  1.48it/s]
+Found 16 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref/stump
+FID stump:   0%|          | 0/2 [00:00<?, ?it/s]FID stump:  50%|█████     | 1/2 [00:01<00:01,  1.28s/it]FID stump: 100%|██████████| 2/2 [00:01<00:00,  1.42it/s]
+  FID[HAC_ori/high/stump] = 59.7645
+Computing FID between two folders
+Found 18 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/high/treehill
+FID treehill:   0%|          | 0/3 [00:00<?, ?it/s]FID treehill:  33%|███▎      | 1/3 [00:01<00:02,  1.23s/it]FID treehill: 100%|██████████| 3/3 [00:01<00:00,  2.25it/s]
+Found 18 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref/treehill
+FID treehill:   0%|          | 0/3 [00:00<?, ?it/s]FID treehill:  33%|███▎      | 1/3 [00:01<00:02,  1.25s/it]FID treehill: 100%|██████████| 3/3 [00:01<00:00,  2.73it/s]FID treehill: 100%|██████████| 3/3 [00:01<00:00,  2.12it/s]
+  FID[HAC_ori/high/treehill] = 29.5697
+Computing FID between two folders
+Found 25 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/low/bicycle
+FID bicycle:   0%|          | 0/4 [00:00<?, ?it/s]FID bicycle:  25%|██▌       | 1/4 [00:01<00:03,  1.20s/it]FID bicycle: 100%|██████████| 4/4 [00:01<00:00,  3.07it/s]
+Found 25 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref/bicycle
+FID bicycle:   0%|          | 0/4 [00:00<?, ?it/s]FID bicycle:  25%|██▌       | 1/4 [00:01<00:03,  1.20s/it]FID bicycle: 100%|██████████| 4/4 [00:01<00:00,  3.03it/s]
+  FID[HAC_ori/low/bicycle] = 22.3495
+Computing FID between two folders
+Found 37 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/low/bonsai
+FID bonsai:   0%|          | 0/5 [00:00<?, ?it/s]FID bonsai:  20%|██        | 1/5 [00:01<00:04,  1.10s/it]FID bonsai:  60%|██████    | 3/5 [00:01<00:00,  3.05it/s]FID bonsai: 100%|██████████| 5/5 [00:01<00:00,  4.24it/s]FID bonsai: 100%|██████████| 5/5 [00:01<00:00,  3.21it/s]
+Found 37 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref/bonsai
+FID bonsai:   0%|          | 0/5 [00:00<?, ?it/s]FID bonsai:  20%|██        | 1/5 [00:01<00:04,  1.23s/it]FID bonsai:  80%|████████  | 4/5 [00:01<00:00,  3.65it/s]FID bonsai: 100%|██████████| 5/5 [00:01<00:00,  2.86it/s]
+  FID[HAC_ori/low/bonsai] = 45.0765
+Computing FID between two folders
+Found 30 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/low/counter
+FID counter:   0%|          | 0/4 [00:00<?, ?it/s]FID counter:  25%|██▌       | 1/4 [00:01<00:03,  1.13s/it]FID counter: 100%|██████████| 4/4 [00:01<00:00,  4.13it/s]FID counter: 100%|██████████| 4/4 [00:01<00:00,  3.12it/s]
+Found 30 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref/counter
+FID counter:   0%|          | 0/4 [00:00<?, ?it/s]FID counter:  25%|██▌       | 1/4 [00:01<00:04,  1.36s/it]FID counter: 100%|██████████| 4/4 [00:01<00:00,  2.73it/s]
+  FID[HAC_ori/low/counter] = 76.6298
+Computing FID between two folders
+Found 22 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/low/flowers
+FID flowers:   0%|          | 0/3 [00:00<?, ?it/s]FID flowers:  33%|███▎      | 1/3 [00:01<00:02,  1.04s/it]FID flowers: 100%|██████████| 3/3 [00:01<00:00,  2.66it/s]
+Found 22 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref/flowers
+FID flowers:   0%|          | 0/3 [00:00<?, ?it/s]FID flowers:  33%|███▎      | 1/3 [00:01<00:02,  1.30s/it]FID flowers: 100%|██████████| 3/3 [00:01<00:00,  2.16it/s]
+  FID[HAC_ori/low/flowers] = 76.9531
+Computing FID between two folders
+Found 24 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/low/garden
+FID garden:   0%|          | 0/3 [00:00<?, ?it/s]FID garden:  33%|███▎      | 1/3 [00:01<00:02,  1.12s/it]FID garden: 100%|██████████| 3/3 [00:01<00:00,  2.49it/s]
+Found 24 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref/garden
+FID garden:   0%|          | 0/3 [00:00<?, ?it/s]FID garden:  33%|███▎      | 1/3 [00:01<00:02,  1.29s/it]FID garden: 100%|██████████| 3/3 [00:01<00:00,  2.13it/s]
+  FID[HAC_ori/low/garden] = 23.3159
+Computing FID between two folders
+Found 35 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/low/kitchen
+FID kitchen:   0%|          | 0/5 [00:00<?, ?it/s]FID kitchen:  20%|██        | 1/5 [00:01<00:04,  1.16s/it]FID kitchen: 100%|██████████| 5/5 [00:01<00:00,  4.28it/s]FID kitchen: 100%|██████████| 5/5 [00:01<00:00,  3.33it/s]
+Found 35 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref/kitchen
+FID kitchen:   0%|          | 0/5 [00:00<?, ?it/s]FID kitchen:  20%|██        | 1/5 [00:01<00:05,  1.29s/it]FID kitchen:  80%|████████  | 4/5 [00:01<00:00,  3.67it/s]FID kitchen: 100%|██████████| 5/5 [00:01<00:00,  3.02it/s]
+  FID[HAC_ori/low/kitchen] = 23.4333
+Computing FID between two folders
+Found 39 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/low/room
+FID room:   0%|          | 0/5 [00:00<?, ?it/s]FID room:  20%|██        | 1/5 [00:01<00:04,  1.20s/it]FID room:  60%|██████    | 3/5 [00:01<00:00,  2.83it/s]FID room: 100%|██████████| 5/5 [00:01<00:00,  4.04it/s]FID room: 100%|██████████| 5/5 [00:01<00:00,  3.02it/s]
+Found 39 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref/room
+FID room:   0%|          | 0/5 [00:00<?, ?it/s]FID room:  20%|██        | 1/5 [00:01<00:05,  1.28s/it]FID room:  80%|████████  | 4/5 [00:01<00:00,  3.68it/s]FID room: 100%|██████████| 5/5 [00:01<00:00,  2.62it/s]
+  FID[HAC_ori/low/room] = 55.9908
+Computing FID between two folders
+Found 16 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/low/stump
+FID stump:   0%|          | 0/2 [00:00<?, ?it/s]FID stump:  50%|█████     | 1/2 [00:01<00:01,  1.13s/it]FID stump: 100%|██████████| 2/2 [00:01<00:00,  1.68it/s]
+Found 16 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref/stump
+FID stump:   0%|          | 0/2 [00:00<?, ?it/s]FID stump:  50%|█████     | 1/2 [00:01<00:01,  1.18s/it]FID stump: 100%|██████████| 2/2 [00:01<00:00,  1.62it/s]
+  FID[HAC_ori/low/stump] = 111.0964
+Computing FID between two folders
+Found 18 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/low/treehill
+FID treehill:   0%|          | 0/3 [00:00<?, ?it/s]FID treehill:  33%|███▎      | 1/3 [00:01<00:02,  1.05s/it]FID treehill: 100%|██████████| 3/3 [00:01<00:00,  2.55it/s]
+Found 18 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref/treehill
+FID treehill:   0%|          | 0/3 [00:00<?, ?it/s]FID treehill:  33%|███▎      | 1/3 [00:01<00:02,  1.33s/it]FID treehill: 100%|██████████| 3/3 [00:01<00:00,  2.12it/s]
+  FID[HAC_ori/low/treehill] = 48.7591
+Computing FID between two folders
+Found 25 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/mid/bicycle
+FID bicycle:   0%|          | 0/4 [00:00<?, ?it/s]FID bicycle:  25%|██▌       | 1/4 [00:01<00:03,  1.16s/it]FID bicycle: 100%|██████████| 4/4 [00:01<00:00,  3.17it/s]
+Found 25 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref/bicycle
+FID bicycle:   0%|          | 0/4 [00:00<?, ?it/s]FID bicycle:  25%|██▌       | 1/4 [00:01<00:03,  1.24s/it]FID bicycle: 100%|██████████| 4/4 [00:01<00:00,  2.97it/s]
+  FID[HAC_ori/mid/bicycle] = 13.8311
+Computing FID between two folders
+Found 37 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/mid/bonsai
+FID bonsai:   0%|          | 0/5 [00:00<?, ?it/s]FID bonsai:  20%|██        | 1/5 [00:01<00:04,  1.23s/it]FID bonsai:  60%|██████    | 3/5 [00:01<00:00,  2.73it/s]FID bonsai: 100%|██████████| 5/5 [00:01<00:00,  4.50it/s]FID bonsai: 100%|██████████| 5/5 [00:01<00:00,  3.17it/s]
+Found 37 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref/bonsai
+FID bonsai:   0%|          | 0/5 [00:00<?, ?it/s]FID bonsai:  20%|██        | 1/5 [00:01<00:04,  1.24s/it]FID bonsai:  60%|██████    | 3/5 [00:01<00:00,  2.75it/s]FID bonsai: 100%|██████████| 5/5 [00:01<00:00,  4.12it/s]FID bonsai: 100%|██████████| 5/5 [00:01<00:00,  3.02it/s]
+  FID[HAC_ori/mid/bonsai] = 27.7337
+Computing FID between two folders
+Found 30 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/mid/counter
+FID counter:   0%|          | 0/4 [00:00<?, ?it/s]FID counter:  25%|██▌       | 1/4 [00:01<00:03,  1.14s/it]FID counter: 100%|██████████| 4/4 [00:01<00:00,  3.21it/s]
+Found 30 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref/counter
+FID counter:   0%|          | 0/4 [00:00<?, ?it/s]FID counter:  25%|██▌       | 1/4 [00:01<00:03,  1.27s/it]FID counter: 100%|██████████| 4/4 [00:01<00:00,  2.86it/s]
+  FID[HAC_ori/mid/counter] = 50.9096
+Computing FID between two folders
+Found 22 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/mid/flowers
+FID flowers:   0%|          | 0/3 [00:00<?, ?it/s]FID flowers:  33%|███▎      | 1/3 [00:01<00:02,  1.13s/it]FID flowers: 100%|██████████| 3/3 [00:01<00:00,  2.39it/s]
+Found 22 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref/flowers
+FID flowers:   0%|          | 0/3 [00:00<?, ?it/s]FID flowers:  33%|███▎      | 1/3 [00:01<00:02,  1.23s/it]FID flowers: 100%|██████████| 3/3 [00:01<00:00,  2.26it/s]
+  FID[HAC_ori/mid/flowers] = 62.3963
+Computing FID between two folders
+Found 24 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/mid/garden
+FID garden:   0%|          | 0/3 [00:00<?, ?it/s]FID garden:  33%|███▎      | 1/3 [00:01<00:02,  1.24s/it]FID garden: 100%|██████████| 3/3 [00:01<00:00,  2.25it/s]
+Found 24 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref/garden
+FID garden:   0%|          | 0/3 [00:00<?, ?it/s]FID garden:  33%|███▎      | 1/3 [00:01<00:02,  1.24s/it]FID garden: 100%|██████████| 3/3 [00:01<00:00,  2.26it/s]
+  FID[HAC_ori/mid/garden] = 14.7851
+Computing FID between two folders
+Found 35 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/mid/kitchen
+FID kitchen:   0%|          | 0/5 [00:00<?, ?it/s]FID kitchen:  20%|██        | 1/5 [00:01<00:04,  1.19s/it]FID kitchen:  80%|████████  | 4/5 [00:01<00:00,  3.81it/s]FID kitchen: 100%|██████████| 5/5 [00:01<00:00,  3.31it/s]
+Found 35 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref/kitchen
+FID kitchen:   0%|          | 0/5 [00:00<?, ?it/s]FID kitchen:  20%|██        | 1/5 [00:01<00:04,  1.25s/it]FID kitchen:  60%|██████    | 3/5 [00:01<00:00,  2.75it/s]FID kitchen: 100%|██████████| 5/5 [00:01<00:00,  4.90it/s]FID kitchen: 100%|██████████| 5/5 [00:01<00:00,  3.30it/s]
+  FID[HAC_ori/mid/kitchen] = 13.2757
+Computing FID between two folders
+Found 39 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/mid/room
+FID room:   0%|          | 0/5 [00:00<?, ?it/s]FID room:  20%|██        | 1/5 [00:01<00:04,  1.07s/it]FID room:  60%|██████    | 3/5 [00:01<00:00,  3.14it/s]FID room: 100%|██████████| 5/5 [00:01<00:00,  4.14it/s]FID room: 100%|██████████| 5/5 [00:01<00:00,  3.21it/s]
+Found 39 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref/room
+FID room:   0%|          | 0/5 [00:00<?, ?it/s]FID room:  20%|██        | 1/5 [00:01<00:05,  1.27s/it]FID room:  60%|██████    | 3/5 [00:01<00:00,  2.69it/s]FID room: 100%|██████████| 5/5 [00:01<00:00,  3.55it/s]FID room: 100%|██████████| 5/5 [00:01<00:00,  2.74it/s]
+  FID[HAC_ori/mid/room] = 26.5759
+Computing FID between two folders
+Found 16 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/mid/stump
+FID stump:   0%|          | 0/2 [00:00<?, ?it/s]FID stump:  50%|█████     | 1/2 [00:01<00:01,  1.19s/it]FID stump: 100%|██████████| 2/2 [00:01<00:00,  1.59it/s]
+Found 16 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref/stump
+FID stump:   0%|          | 0/2 [00:00<?, ?it/s]FID stump:  50%|█████     | 1/2 [00:01<00:01,  1.34s/it]FID stump: 100%|██████████| 2/2 [00:01<00:00,  1.43it/s]
+  FID[HAC_ori/mid/stump] = 69.2823
+Computing FID between two folders
+Found 18 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/mid/treehill
+FID treehill:   0%|          | 0/3 [00:00<?, ?it/s]FID treehill:  33%|███▎      | 1/3 [00:01<00:02,  1.05s/it]FID treehill: 100%|██████████| 3/3 [00:01<00:00,  2.65it/s]
+Found 18 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref/treehill
+FID treehill:   0%|          | 0/3 [00:00<?, ?it/s]FID treehill:  33%|███▎      | 1/3 [00:01<00:02,  1.20s/it]FID treehill: 100%|██████████| 3/3 [00:01<00:00,  2.35it/s]
+  FID[HAC_ori/mid/treehill] = 32.1864
+Computing pooled (all-scenes) FID...
+Loading pretrained model Inception3 from /home/u4546465/.cache/torch/hub/pyiqa/pt_inception-2015-12-05-6726825d.pth
+Computing FID between two folders
+Found 246 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/high
+FID high:   0%|          | 0/31 [00:00<?, ?it/s]FID high:   3%|▎         | 1/31 [00:01<00:37,  1.25s/it]FID high:  16%|█▌        | 5/31 [00:01<00:08,  3.00it/s]FID high:  29%|██▉       | 9/31 [00:02<00:05,  4.09it/s]FID high:  35%|███▌      | 11/31 [00:02<00:03,  5.20it/s]FID high:  42%|████▏     | 13/31 [00:03<00:04,  4.31it/s]FID high:  52%|█████▏    | 16/31 [00:03<00:02,  6.21it/s]FID high:  58%|█████▊    | 18/31 [00:04<00:02,  4.95it/s]FID high:  65%|██████▍   | 20/31 [00:04<00:01,  6.07it/s]FID high:  71%|███████   | 22/31 [00:04<00:01,  4.87it/s]FID high:  81%|████████  | 25/31 [00:05<00:01,  4.69it/s]FID high:  90%|█████████ | 28/31 [00:05<00:00,  6.46it/s]FID high:  97%|█████████▋| 30/31 [00:06<00:00,  5.35it/s]FID high: 100%|██████████| 31/31 [00:06<00:00,  4.87it/s]
+Found 246 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref
+FID ref:   0%|          | 0/31 [00:00<?, ?it/s]FID ref:   3%|▎         | 1/31 [00:01<00:39,  1.32s/it]FID ref:  10%|▉         | 3/31 [00:01<00:11,  2.53it/s]FID ref:  16%|█▌        | 5/31 [00:02<00:09,  2.85it/s]FID ref:  26%|██▌       | 8/31 [00:02<00:04,  5.22it/s]FID ref:  32%|███▏      | 10/31 [00:03<00:05,  3.87it/s]FID ref:  39%|███▊      | 12/31 [00:03<00:03,  4.94it/s]FID ref:  42%|████▏     | 13/31 [00:03<00:05,  3.32it/s]FID ref:  48%|████▊     | 15/31 [00:04<00:03,  4.39it/s]FID ref:  55%|█████▍    | 17/31 [00:04<00:03,  3.71it/s]FID ref:  61%|██████▏   | 19/31 [00:04<00:02,  4.91it/s]FID ref:  68%|██████▊   | 21/31 [00:05<00:02,  4.08it/s]FID ref:  81%|████████  | 25/31 [00:06<00:01,  4.46it/s]FID ref:  87%|████████▋ | 27/31 [00:06<00:00,  5.35it/s]FID ref:  94%|█████████▎| 29/31 [00:07<00:00,  4.91it/s]FID ref: 100%|██████████| 31/31 [00:07<00:00,  4.34it/s]
+  FID[HAC_ori/high/ALL_SCENES] = 21.7515
+Computing FID between two folders
+Found 246 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/low
+FID low:   0%|          | 0/31 [00:00<?, ?it/s]FID low:   3%|▎         | 1/31 [00:01<00:34,  1.14s/it]FID low:  10%|▉         | 3/31 [00:01<00:09,  2.87it/s]FID low:  16%|█▌        | 5/31 [00:01<00:08,  3.06it/s]FID low:  19%|█▉        | 6/31 [00:02<00:06,  3.71it/s]FID low:  26%|██▌       | 8/31 [00:02<00:04,  5.26it/s]FID low:  29%|██▉       | 9/31 [00:02<00:05,  3.92it/s]FID low:  32%|███▏      | 10/31 [00:02<00:05,  3.98it/s]FID low:  39%|███▊      | 12/31 [00:03<00:03,  5.57it/s]FID low:  42%|████▏     | 13/31 [00:03<00:04,  4.09it/s]FID low:  45%|████▌     | 14/31 [00:03<00:04,  4.11it/s]FID low:  52%|█████▏    | 16/31 [00:03<00:02,  5.81it/s]FID low:  55%|█████▍    | 17/31 [00:04<00:03,  4.15it/s]FID low:  58%|█████▊    | 18/31 [00:04<00:02,  4.55it/s]FID low:  65%|██████▍   | 20/31 [00:04<00:01,  6.00it/s]FID low:  68%|██████▊   | 21/31 [00:05<00:02,  4.05it/s]FID low:  74%|███████▍  | 23/31 [00:05<00:01,  5.75it/s]FID low:  81%|████████  | 25/31 [00:05<00:01,  4.46it/s]FID low:  87%|████████▋ | 27/31 [00:06<00:00,  5.87it/s]FID low:  94%|█████████▎| 29/31 [00:06<00:00,  5.34it/s]FID low: 100%|██████████| 31/31 [00:06<00:00,  4.65it/s]
+Found 246 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref
+FID ref:   0%|          | 0/31 [00:00<?, ?it/s]FID ref:   3%|▎         | 1/31 [00:01<00:41,  1.40s/it]FID ref:  10%|▉         | 3/31 [00:01<00:11,  2.38it/s]FID ref:  16%|█▌        | 5/31 [00:02<00:09,  2.68it/s]FID ref:  23%|██▎       | 7/31 [00:02<00:05,  4.03it/s]FID ref:  29%|██▉       | 9/31 [00:03<00:06,  3.31it/s]FID ref:  35%|███▌      | 11/31 [00:03<00:04,  4.57it/s]FID ref:  42%|████▏     | 13/31 [00:04<00:04,  3.72it/s]FID ref:  52%|█████▏    | 16/31 [00:04<00:02,  5.75it/s]FID ref:  58%|█████▊    | 18/31 [00:04<00:02,  4.43it/s]FID ref:  68%|██████▊   | 21/31 [00:05<00:02,  4.26it/s]FID ref:  77%|███████▋  | 24/31 [00:05<00:01,  6.08it/s]FID ref:  84%|████████▍ | 26/31 [00:06<00:01,  4.53it/s]FID ref:  90%|█████████ | 28/31 [00:06<00:00,  5.58it/s]FID ref:  97%|█████████▋| 30/31 [00:07<00:00,  4.80it/s]FID ref: 100%|██████████| 31/31 [00:07<00:00,  4.27it/s]
+  FID[HAC_ori/low/ALL_SCENES] = 39.8666
+Computing FID between two folders
+Found 246 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/fake/HAC_ori/mid
+FID mid:   0%|          | 0/31 [00:00<?, ?it/s]FID mid:   3%|▎         | 1/31 [00:01<00:36,  1.21s/it]FID mid:   6%|▋         | 2/31 [00:01<00:16,  1.79it/s]FID mid:  13%|█▎        | 4/31 [00:01<00:06,  3.95it/s]FID mid:  16%|█▌        | 5/31 [00:01<00:08,  2.94it/s]FID mid:  23%|██▎       | 7/31 [00:02<00:05,  4.67it/s]FID mid:  29%|██▉       | 9/31 [00:02<00:05,  3.75it/s]FID mid:  42%|████▏     | 13/31 [00:03<00:03,  4.56it/s]FID mid:  52%|█████▏    | 16/31 [00:03<00:02,  6.57it/s]FID mid:  58%|█████▊    | 18/31 [00:04<00:02,  4.99it/s]FID mid:  68%|██████▊   | 21/31 [00:04<00:02,  4.79it/s]FID mid:  81%|████████  | 25/31 [00:05<00:01,  4.94it/s]FID mid:  84%|████████▍ | 26/31 [00:05<00:00,  5.20it/s]FID mid:  87%|████████▋ | 27/31 [00:05<00:00,  5.56it/s]FID mid:  94%|█████████▎| 29/31 [00:06<00:00,  5.78it/s]FID mid: 100%|██████████| 31/31 [00:06<00:00,  4.85it/s]
+Found 246 images in the folder /home/u4546465/iqa_eval/_fid_symlinks/ref
+FID ref:   0%|          | 0/31 [00:00<?, ?it/s]FID ref:   3%|▎         | 1/31 [00:01<00:41,  1.39s/it]FID ref:  13%|█▎        | 4/31 [00:01<00:07,  3.44it/s]FID ref:  19%|█▉        | 6/31 [00:02<00:08,  3.11it/s]FID ref:  26%|██▌       | 8/31 [00:02<00:05,  4.27it/s]FID ref:  32%|███▏      | 10/31 [00:03<00:05,  3.58it/s]FID ref:  42%|████▏     | 13/31 [00:03<00:04,  3.81it/s]FID ref:  52%|█████▏    | 16/31 [00:03<00:02,  5.70it/s]FID ref:  58%|█████▊    | 18/31 [00:04<00:02,  4.41it/s]FID ref:  68%|██████▊   | 21/31 [00:05<00:02,  4.25it/s]FID ref:  77%|███████▋  | 24/31 [00:05<00:01,  5.87it/s]FID ref:  84%|████████▍ | 26/31 [00:06<00:01,  4.63it/s]FID ref:  90%|█████████ | 28/31 [00:06<00:00,  5.46it/s]FID ref:  97%|█████████▋| 30/31 [00:06<00:00,  5.01it/s]FID ref: 100%|██████████| 31/31 [00:07<00:00,  4.42it/s]
+  FID[HAC_ori/mid/ALL_SCENES] = 24.9836
+Wrote /home/u4546465/iqa_eval/results/per_image.csv (2952 rows)
+Wrote /home/u4546465/iqa_eval/results/per_scene.csv (108 rows)
+Wrote /home/u4546465/iqa_eval/results/summary.csv (12 rows)

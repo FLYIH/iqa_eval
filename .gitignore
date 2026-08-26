@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temp working dirs auto-created by the eval scripts (pure symlinks/scratch,
+# regenerated fresh on every run -- see eval_cat3dgs.py's build note)
+_fid_symlinks/
+_fid_symlinks_*/
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

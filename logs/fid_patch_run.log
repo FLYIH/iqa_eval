@@ -1,0 +1,172 @@
+/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+/home/u4546465/iqa_eval/eval_fid_patch.py:122: DeprecationWarning: The `disp` argument is deprecated and will be removed in SciPy 1.18.0.
+  covmean, _ = linalg.sqrtm(sigma1.dot(sigma2), disp=False)
+Discovering views...
+Found 9 scenes, 246 views total
+Building file records (methods=ALL)...
+Total (method,rate,view) records: 2952
+Patch grid: 256x256, two-grid scheme per HiFiC Appendix A.7
+Computing Inception patch-features for all fake + reference images (cached per image)...
+Loading pretrained model Inception3 from /home/u4546465/.cache/torch/hub/pyiqa/pt_inception-2015-12-05-6726825d.pth
+  ref features [50/246]
+  ref features [100/246]
+  ref features [150/246]
+  ref features [200/246]
+  ref features [246/246]
+  fake features [100/2952]
+  fake features [200/2952]
+  fake features [300/2952]
+  fake features [400/2952]
+  fake features [500/2952]
+  fake features [600/2952]
+  fake features [700/2952]
+  fake features [800/2952]
+  fake features [900/2952]
+  fake features [1000/2952]
+  fake features [1100/2952]
+  fake features [1200/2952]
+  fake features [1300/2952]
+  fake features [1400/2952]
+  fake features [1500/2952]
+  fake features [1600/2952]
+  fake features [1700/2952]
+  fake features [1800/2952]
+  fake features [1900/2952]
+  fake features [2000/2952]
+  fake features [2100/2952]
+  fake features [2200/2952]
+  fake features [2300/2952]
+  fake features [2400/2952]
+  fake features [2500/2952]
+  fake features [2600/2952]
+  fake features [2700/2952]
+  fake features [2800/2952]
+  fake features [2900/2952]
+  fake features [2952/2952]
+Computing patch-based FID per (method, rate, scene) and pooled...
+Pooled reference: 9594 patches from 246 images
+  FID_patch[3DCR/high/bicycle] = 17.0652  (fake_patches=975, ref_patches=975)
+  FID_patch[Orig/high/bicycle] = 61.6253  (fake_patches=975, ref_patches=975)
+  FID_patch[HACplus+CR/high/bicycle] = 17.2560  (fake_patches=975, ref_patches=975)
+  FID_patch[HAC_ori/high/bicycle] = 61.6177  (fake_patches=975, ref_patches=975)
+  FID_patch[3DCR/mid/bicycle] = 20.0867  (fake_patches=975, ref_patches=975)
+  FID_patch[Orig/mid/bicycle] = 101.3887  (fake_patches=975, ref_patches=975)
+  FID_patch[HACplus+CR/mid/bicycle] = 17.4481  (fake_patches=975, ref_patches=975)
+  FID_patch[HAC_ori/mid/bicycle] = 81.2223  (fake_patches=975, ref_patches=975)
+  FID_patch[3DCR/low/bicycle] = 23.6028  (fake_patches=975, ref_patches=975)
+  FID_patch[Orig/low/bicycle] = 165.3887  (fake_patches=975, ref_patches=975)
+  FID_patch[HACplus+CR/low/bicycle] = 23.4874  (fake_patches=975, ref_patches=975)
+  FID_patch[HAC_ori/low/bicycle] = 150.7910  (fake_patches=975, ref_patches=975)
+  FID_patch[3DCR/high/bonsai] = 16.1389  (fake_patches=1443, ref_patches=1443)
+  FID_patch[Orig/high/bonsai] = 44.2072  (fake_patches=1443, ref_patches=1443)
+  FID_patch[HACplus+CR/high/bonsai] = 15.0909  (fake_patches=1443, ref_patches=1443)
+  FID_patch[HAC_ori/high/bonsai] = 42.1581  (fake_patches=1443, ref_patches=1443)
+  FID_patch[3DCR/mid/bonsai] = 20.3776  (fake_patches=1443, ref_patches=1443)
+  FID_patch[Orig/mid/bonsai] = 55.5005  (fake_patches=1443, ref_patches=1443)
+  FID_patch[HACplus+CR/mid/bonsai] = 16.4283  (fake_patches=1443, ref_patches=1443)
+  FID_patch[HAC_ori/mid/bonsai] = 45.5766  (fake_patches=1443, ref_patches=1443)
+  FID_patch[3DCR/low/bonsai] = 26.0980  (fake_patches=1443, ref_patches=1443)
+  FID_patch[Orig/low/bonsai] = 70.1788  (fake_patches=1443, ref_patches=1443)
+  FID_patch[HACplus+CR/low/bonsai] = 22.5513  (fake_patches=1443, ref_patches=1443)
+  FID_patch[HAC_ori/low/bonsai] = 64.8071  (fake_patches=1443, ref_patches=1443)
+  FID_patch[3DCR/high/counter] = 31.1362  (fake_patches=1170, ref_patches=1170)
+  FID_patch[Orig/high/counter] = 63.1815  (fake_patches=1170, ref_patches=1170)
+  FID_patch[HACplus+CR/high/counter] = 29.2902  (fake_patches=1170, ref_patches=1170)
+  FID_patch[HAC_ori/high/counter] = 59.5841  (fake_patches=1170, ref_patches=1170)
+  FID_patch[3DCR/mid/counter] = 35.1736  (fake_patches=1170, ref_patches=1170)
+  FID_patch[Orig/mid/counter] = 75.7520  (fake_patches=1170, ref_patches=1170)
+  FID_patch[HACplus+CR/mid/counter] = 39.8360  (fake_patches=1170, ref_patches=1170)
+  FID_patch[HAC_ori/mid/counter] = 66.3845  (fake_patches=1170, ref_patches=1170)
+  FID_patch[3DCR/low/counter] = 45.7131  (fake_patches=1170, ref_patches=1170)
+  FID_patch[Orig/low/counter] = 91.3425  (fake_patches=1170, ref_patches=1170)
+  FID_patch[HACplus+CR/low/counter] = 41.4480  (fake_patches=1170, ref_patches=1170)
+  FID_patch[HAC_ori/low/counter] = 96.4403  (fake_patches=1170, ref_patches=1170)
+  FID_patch[3DCR/high/flowers] = 33.2738  (fake_patches=858, ref_patches=858)
+  FID_patch[Orig/high/flowers] = 139.8799  (fake_patches=858, ref_patches=858)
+  FID_patch[HACplus+CR/high/flowers] = 34.9115  (fake_patches=858, ref_patches=858)
+  FID_patch[HAC_ori/high/flowers] = 146.8121  (fake_patches=858, ref_patches=858)
+  FID_patch[3DCR/mid/flowers] = 37.4866  (fake_patches=858, ref_patches=858)
+  FID_patch[Orig/mid/flowers] = 167.9407  (fake_patches=858, ref_patches=858)
+  FID_patch[HACplus+CR/mid/flowers] = 36.8096  (fake_patches=858, ref_patches=858)
+  FID_patch[HAC_ori/mid/flowers] = 161.6343  (fake_patches=858, ref_patches=858)
+  FID_patch[3DCR/low/flowers] = 45.3507  (fake_patches=858, ref_patches=858)
+  FID_patch[Orig/low/flowers] = 206.7698  (fake_patches=858, ref_patches=858)
+  FID_patch[HACplus+CR/low/flowers] = 47.7447  (fake_patches=858, ref_patches=858)
+  FID_patch[HAC_ori/low/flowers] = 207.8919  (fake_patches=858, ref_patches=858)
+  FID_patch[3DCR/high/garden] = 14.3823  (fake_patches=936, ref_patches=936)
+  FID_patch[Orig/high/garden] = 40.5715  (fake_patches=936, ref_patches=936)
+  FID_patch[HACplus+CR/high/garden] = 14.3981  (fake_patches=936, ref_patches=936)
+  FID_patch[HAC_ori/high/garden] = 44.5503  (fake_patches=936, ref_patches=936)
+  FID_patch[3DCR/mid/garden] = 19.4348  (fake_patches=936, ref_patches=936)
+  FID_patch[Orig/mid/garden] = 70.3347  (fake_patches=936, ref_patches=936)
+  FID_patch[HACplus+CR/mid/garden] = 17.1923  (fake_patches=936, ref_patches=936)
+  FID_patch[HAC_ori/mid/garden] = 62.7306  (fake_patches=936, ref_patches=936)
+  FID_patch[3DCR/low/garden] = 25.2347  (fake_patches=936, ref_patches=936)
+  FID_patch[Orig/low/garden] = 127.0109  (fake_patches=936, ref_patches=936)
+  FID_patch[HACplus+CR/low/garden] = 25.7064  (fake_patches=936, ref_patches=936)
+  FID_patch[HAC_ori/low/garden] = 149.4649  (fake_patches=936, ref_patches=936)
+  FID_patch[3DCR/high/kitchen] = 17.0804  (fake_patches=1365, ref_patches=1365)
+  FID_patch[Orig/high/kitchen] = 28.9341  (fake_patches=1365, ref_patches=1365)
+  FID_patch[HACplus+CR/high/kitchen] = 16.6222  (fake_patches=1365, ref_patches=1365)
+  FID_patch[HAC_ori/high/kitchen] = 27.3943  (fake_patches=1365, ref_patches=1365)
+  FID_patch[3DCR/mid/kitchen] = 20.9456  (fake_patches=1365, ref_patches=1365)
+  FID_patch[Orig/mid/kitchen] = 42.3458  (fake_patches=1365, ref_patches=1365)
+  FID_patch[HACplus+CR/mid/kitchen] = 17.9697  (fake_patches=1365, ref_patches=1365)
+  FID_patch[HAC_ori/mid/kitchen] = 32.9445  (fake_patches=1365, ref_patches=1365)
+  FID_patch[3DCR/low/kitchen] = 27.2978  (fake_patches=1365, ref_patches=1365)
+  FID_patch[Orig/low/kitchen] = 61.3004  (fake_patches=1365, ref_patches=1365)
+  FID_patch[HACplus+CR/low/kitchen] = 25.2230  (fake_patches=1365, ref_patches=1365)
+  FID_patch[HAC_ori/low/kitchen] = 57.3987  (fake_patches=1365, ref_patches=1365)
+  FID_patch[3DCR/high/room] = 26.6079  (fake_patches=1521, ref_patches=1521)
+  FID_patch[Orig/high/room] = 62.1512  (fake_patches=1521, ref_patches=1521)
+  FID_patch[HACplus+CR/high/room] = 22.5674  (fake_patches=1521, ref_patches=1521)
+  FID_patch[HAC_ori/high/room] = 58.1069  (fake_patches=1521, ref_patches=1521)
+  FID_patch[3DCR/mid/room] = 28.7589  (fake_patches=1521, ref_patches=1521)
+  FID_patch[Orig/mid/room] = 89.2199  (fake_patches=1521, ref_patches=1521)
+  FID_patch[HACplus+CR/mid/room] = 25.3868  (fake_patches=1521, ref_patches=1521)
+  FID_patch[HAC_ori/mid/room] = 69.5784  (fake_patches=1521, ref_patches=1521)
+  FID_patch[3DCR/low/room] = 35.3289  (fake_patches=1521, ref_patches=1521)
+  FID_patch[Orig/low/room] = 105.7360  (fake_patches=1521, ref_patches=1521)
+  FID_patch[HACplus+CR/low/room] = 31.0845  (fake_patches=1521, ref_patches=1521)
+  FID_patch[HAC_ori/low/room] = 98.8290  (fake_patches=1521, ref_patches=1521)
+  FID_patch[3DCR/high/stump] = 31.3075  (fake_patches=624, ref_patches=624)
+  FID_patch[Orig/high/stump] = 83.6006  (fake_patches=624, ref_patches=624)
+  FID_patch[HACplus+CR/high/stump] = 29.7710  (fake_patches=624, ref_patches=624)
+  FID_patch[HAC_ori/high/stump] = 81.3108  (fake_patches=624, ref_patches=624)
+  FID_patch[3DCR/mid/stump] = 30.7339  (fake_patches=624, ref_patches=624)
+  FID_patch[Orig/mid/stump] = 144.6084  (fake_patches=624, ref_patches=624)
+  FID_patch[HACplus+CR/mid/stump] = 29.5889  (fake_patches=624, ref_patches=624)
+  FID_patch[HAC_ori/mid/stump] = 106.8154  (fake_patches=624, ref_patches=624)
+  FID_patch[3DCR/low/stump] = 39.8861  (fake_patches=624, ref_patches=624)
+  FID_patch[Orig/low/stump] = 224.0295  (fake_patches=624, ref_patches=624)
+  FID_patch[HACplus+CR/low/stump] = 35.7325  (fake_patches=624, ref_patches=624)
+  FID_patch[HAC_ori/low/stump] = 186.1389  (fake_patches=624, ref_patches=624)
+  FID_patch[3DCR/high/treehill] = 30.5706  (fake_patches=702, ref_patches=702)
+  FID_patch[Orig/high/treehill] = 157.0873  (fake_patches=702, ref_patches=702)
+  FID_patch[HACplus+CR/high/treehill] = 31.4936  (fake_patches=702, ref_patches=702)
+  FID_patch[HAC_ori/high/treehill] = 168.7187  (fake_patches=702, ref_patches=702)
+  FID_patch[3DCR/mid/treehill] = 32.4761  (fake_patches=702, ref_patches=702)
+  FID_patch[Orig/mid/treehill] = 219.2659  (fake_patches=702, ref_patches=702)
+  FID_patch[HACplus+CR/mid/treehill] = 36.0197  (fake_patches=702, ref_patches=702)
+  FID_patch[HAC_ori/mid/treehill] = 213.8477  (fake_patches=702, ref_patches=702)
+  FID_patch[3DCR/low/treehill] = 43.1936  (fake_patches=702, ref_patches=702)
+  FID_patch[Orig/low/treehill] = 291.9705  (fake_patches=702, ref_patches=702)
+  FID_patch[HACplus+CR/low/treehill] = 54.6660  (fake_patches=702, ref_patches=702)
+  FID_patch[HAC_ori/low/treehill] = 299.7788  (fake_patches=702, ref_patches=702)
+  FID_patch[3DCR/high/ALL_SCENES] = 6.3500  (fake_patches=9594, ref_patches=9594)
+  FID_patch[Orig/high/ALL_SCENES] = 33.8941  (fake_patches=9594, ref_patches=9594)
+  FID_patch[HACplus+CR/high/ALL_SCENES] = 5.9839  (fake_patches=9594, ref_patches=9594)
+  FID_patch[HAC_ori/high/ALL_SCENES] = 34.0507  (fake_patches=9594, ref_patches=9594)
+  FID_patch[3DCR/mid/ALL_SCENES] = 7.4136  (fake_patches=9594, ref_patches=9594)
+  FID_patch[Orig/mid/ALL_SCENES] = 52.2149  (fake_patches=9594, ref_patches=9594)
+  FID_patch[HACplus+CR/mid/ALL_SCENES] = 7.0746  (fake_patches=9594, ref_patches=9594)
+  FID_patch[HAC_ori/mid/ALL_SCENES] = 43.3160  (fake_patches=9594, ref_patches=9594)
+  FID_patch[3DCR/low/ALL_SCENES] = 10.5587  (fake_patches=9594, ref_patches=9594)
+  FID_patch[Orig/low/ALL_SCENES] = 78.5073  (fake_patches=9594, ref_patches=9594)
+  FID_patch[HACplus+CR/low/ALL_SCENES] = 10.2534  (fake_patches=9594, ref_patches=9594)
+  FID_patch[HAC_ori/low/ALL_SCENES] = 76.6381  (fake_patches=9594, ref_patches=9594)
+Wrote /home/u4546465/iqa_eval/results/fid_patch_per_scene.csv
+Wrote /home/u4546465/iqa_eval/results/fid_patch_summary.csv
