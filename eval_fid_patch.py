@@ -118,13 +118,32 @@ class InceptionFeatureExtractor:
             feats.append(feat)
         return np.concatenate(feats, axis=0).astype(np.float32)
 
+    def features_for_crops_raw(self, crops, batch_size=32):
+        """Like features_for_crops but skips the resize-to-299x299 step, feeding
+        each crop at its native resolution -- relies on InceptionV3's adaptive
+        avg pool (pool_3 block) to handle variable spatial input size. All crops
+        passed in one call must share the same HxW (true for one image's
+        five-crop set, since they're all crop_frac*min(H,W) of that image)."""
+        torch = self.torch
+        arrs = [c.astype(np.float32) for c in crops]  # list of HxWx3 float32, native size
+        feats = []
+        for i in range(0, len(arrs), batch_size):
+            chunk = arrs[i:i + batch_size]
+            batch = torch.tensor(np.stack(chunk)).permute(0, 3, 1, 2)  # N,3,H,W
+            batch = (batch - 128) / 128
+            with torch.no_grad():
+                feat = self.model(batch.to(self.device), False, False)[0]
+                feat = feat.reshape(feat.shape[0], feat.shape[1]).detach().cpu().numpy()
+            feats.append(feat)
+        return np.concatenate(feats, axis=0).astype(np.float32)
+
 
 def frechet_distance(mu1, sigma1, mu2, sigma2, eps=1e-6):
     from scipy import linalg
     mu1, mu2 = np.atleast_1d(mu1), np.atleast_1d(mu2)
     sigma1, sigma2 = np.atleast_2d(sigma1), np.atleast_2d(sigma2)
     diff = mu1 - mu2
-    covmean, _ = linalg.sqrtm(sigma1.dot(sigma2), disp=False)
+    covmean = linalg.sqrtm(sigma1.dot(sigma2))
     if not np.isfinite(covmean).all():
         offset = np.eye(sigma1.shape[0]) * eps
         covmean = linalg.sqrtm((sigma1 + offset).dot(sigma2 + offset))

@@ -79,14 +79,18 @@ def five_crop_and_flip(img_path, crop_frac=CROP_FRAC):
     return crops  # 10 crops
 
 
-def compute_all_crops_and_features(records, ref_paths, device):
+def compute_all_crops_and_features(records, ref_paths, device, no_downsample=False):
     inception = InceptionFeatureExtractor(device)
     clip_model = ClipEmbeddingModel(device)
 
     def feats_for(path):
         crops = five_crop_and_flip(path)
-        fid_feats = inception.features_for_crops(crops)   # (10, 2048)
-        cmmd_embs = clip_model.embed_crops(crops)          # (10, embed_dim)
+        if no_downsample:
+            fid_feats = inception.features_for_crops_raw(crops)  # (10, 2048), native crop res
+            cmmd_embs = clip_model.embed_crops_raw(crops)         # (10, embed_dim), native crop res
+        else:
+            fid_feats = inception.features_for_crops(crops)   # (10, 2048)
+            cmmd_embs = clip_model.embed_crops(crops)          # (10, embed_dim)
         return fid_feats, cmmd_embs
 
     ref_fid, ref_cmmd = {}, {}
@@ -142,11 +146,11 @@ def compute_per_scene(records, ref_fid, ref_cmmd, fake_fid, fake_cmmd):
     return results
 
 
-def write_outputs(per_scene, out_dir):
+def write_outputs(per_scene, out_dir, prefix="fivecrop"):
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    p = out_dir / "fivecrop_per_scene.csv"
+    p = out_dir / f"{prefix}_per_scene.csv"
     with open(p, "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=["method", "rate", "scene", "fid", "cmmd", "n_fake_crops", "n_ref_crops"])
         w.writeheader()
@@ -163,7 +167,7 @@ def write_outputs(per_scene, out_dir):
         elif scene in OUTDOOR:
             groups[(method, rate, "outdoor")].append((fid_val, cmmd_val))
 
-    p = out_dir / "fivecrop_summary.csv"
+    p = out_dir / f"{prefix}_summary.csv"
     with open(p, "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=["method", "rate", "group", "fid_mean", "cmmd_mean", "n_scenes"])
         w.writeheader()
@@ -185,6 +189,14 @@ def main():
     ap.add_argument("--limit_scenes", default=None)
     ap.add_argument("--limit_per_scene", type=int, default=None)
     ap.add_argument("--methods", default=None)
+    ap.add_argument("--no_downsample", action="store_true",
+                    help="Skip resizing five-crop patches down to the models' native "
+                         "input resolution (299x299 for Inception/FID, 336x336 for "
+                         "CLIP/CMMD) and feed them at their native crop resolution "
+                         "instead (Inception via its adaptive avg pool, CLIP via "
+                         "interpolate_pos_encoding=True). Writes to separate "
+                         "fivecrop_nodownsample_{per_scene,summary}.csv files so the "
+                         "normal downsampled results are never overwritten.")
     args = ap.parse_args()
 
     limit_scenes = set(args.limit_scenes.split(",")) if args.limit_scenes else None
@@ -198,13 +210,16 @@ def main():
     records = build_records(args.cat3dgs_root, args.hac_root, scenes, methods=methods)
     print(f"Total (method,rate,view) records: {len(records)} (each -> 10 five-crop+flip sub-images)")
 
-    print("Computing five-crop Inception (FID) + CLIP (CMMD) features for all fake + reference images...")
-    fake_fid, fake_cmmd, ref_fid, ref_cmmd = compute_all_crops_and_features(records, ref_paths, args.device)
+    print(f"Computing five-crop Inception (FID) + CLIP (CMMD) features for all fake + reference "
+          f"images (no_downsample={args.no_downsample})...")
+    fake_fid, fake_cmmd, ref_fid, ref_cmmd = compute_all_crops_and_features(
+        records, ref_paths, args.device, no_downsample=args.no_downsample)
 
     print("Computing per-scene FID + CMMD...")
     per_scene = compute_per_scene(records, ref_fid, ref_cmmd, fake_fid, fake_cmmd)
 
-    write_outputs(per_scene, args.out_dir)
+    prefix = "fivecrop_nodownsample" if args.no_downsample else "fivecrop"
+    write_outputs(per_scene, args.out_dir, prefix=prefix)
 
 
 if __name__ == "__main__":

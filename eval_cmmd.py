@@ -119,6 +119,27 @@ class ClipEmbeddingModel:
             embs.append(emb.numpy())
         return np.concatenate(embs, axis=0)  # (n_crops, embedding_dim)
 
+    @torch.no_grad()
+    def embed_crops_raw(self, crops, batch_size=32):
+        """Like embed_crops but skips resizing to input_image_size (336x336):
+        feeds each crop at native resolution with interpolate_pos_encoding=True
+        so CLIP's fixed position embeddings are bicubic-interpolated to match,
+        instead of requiring an exact 336x336 input. All crops passed in one
+        call must share the same HxW (true for one image's five-crop set)."""
+        embs = []
+        for i in range(0, len(crops), batch_size):
+            chunk = crops[i:i + batch_size]
+            arr = np.stack(chunk).astype(np.float32) / 255.0  # NxHxWx3, [0,1], native size
+            inputs = self.image_processor(
+                images=arr, do_normalize=True, do_center_crop=False,
+                do_resize=False, do_rescale=False, return_tensors="pt",
+            )
+            inputs = {k: v.to(self.device) for k, v in inputs.items()}
+            emb = self._model(**inputs, interpolate_pos_encoding=True).image_embeds.cpu()
+            emb = emb / torch.linalg.norm(emb, dim=-1, keepdim=True)
+            embs.append(emb.numpy())
+        return np.concatenate(embs, axis=0)  # (n_crops, embedding_dim)
+
 
 def mmd(x, y):
     """Exact port of cmmd-pytorch's distance.mmd (sigma=10, scale=1000)."""
