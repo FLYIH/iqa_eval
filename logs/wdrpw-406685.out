@@ -1,0 +1,83 @@
+Discovering views...
+Found 6 scenes, 167 views total
+Building file records (methods={'wdr_pw', '3DCR', 'Orig'})...
+Total (method,rate,view) records: 1503 (each -> 10 five-crop+flip sub-images)
+Computing five-crop Inception (FID) + CLIP (CMMD) features for all fake + reference images (no_downsample=True)...
+Loading pretrained model Inception3 from /home/u4546465/.cache/torch/hub/pyiqa/pt_inception-2015-12-05-6726825d.pth
+  ref crops+features [50/167]
+  ref crops+features [100/167]
+  ref crops+features [150/167]
+  ref crops+features [167/167]
+  fake crops+features [100/1503]
+  fake crops+features [200/1503]
+  fake crops+features [300/1503]
+  fake crops+features [400/1503]
+  fake crops+features [500/1503]
+  fake crops+features [600/1503]
+  fake crops+features [700/1503]
+  fake crops+features [800/1503]
+  fake crops+features [900/1503]
+  fake crops+features [1000/1503]
+  fake crops+features [1100/1503]
+  fake crops+features [1200/1503]
+  fake crops+features [1300/1503]
+  fake crops+features [1400/1503]
+  fake crops+features [1500/1503]
+  fake crops+features [1503/1503]
+Computing per-scene FID + CMMD...
+  [3DCR/high/bicycle] FID=2.8643  CMMD=0.2537  (n_fake_crops=250, n_ref_crops=250)
+  [Orig/high/bicycle] FID=9.8124  CMMD=0.7428  (n_fake_crops=250, n_ref_crops=250)
+  [wdr_pw/high/bicycle] FID=3.9584  CMMD=0.2854  (n_fake_crops=250, n_ref_crops=250)
+  [3DCR/mid/bicycle] FID=3.2622  CMMD=0.3182  (n_fake_crops=250, n_ref_crops=250)
+  [Orig/mid/bicycle] FID=15.1629  CMMD=0.9856  (n_fake_crops=250, n_ref_crops=250)
+  [wdr_pw/mid/bicycle] FID=4.8154  CMMD=0.3682  (n_fake_crops=250, n_ref_crops=250)
+  [3DCR/low/bicycle] FID=3.9939  CMMD=0.3631  (n_fake_crops=250, n_ref_crops=250)
+  [Orig/low/bicycle] FID=24.7039  CMMD=1.6687  (n_fake_crops=250, n_ref_crops=250)
+  [wdr_pw/low/bicycle] FID=6.0587  CMMD=0.5007  (n_fake_crops=250, n_ref_crops=250)
+  [3DCR/high/bonsai] FID=2.9331  CMMD=0.6757  (n_fake_crops=370, n_ref_crops=370)
+  [Orig/high/bonsai] FID=8.4207  CMMD=0.9784  (n_fake_crops=370, n_ref_crops=370)
+  [wdr_pw/high/bonsai] FID=3.1854  CMMD=0.5467  (n_fake_crops=370, n_ref_crops=370)
+  [3DCR/mid/bonsai] FID=3.6911  CMMD=0.8243  (n_fake_crops=370, n_ref_crops=370)
+  [Orig/mid/bonsai] FID=10.3847  CMMD=1.3071  (n_fake_crops=370, n_ref_crops=370)
+  [wdr_pw/mid/bonsai] FID=4.2590  CMMD=0.6592  (n_fake_crops=360, n_ref_crops=370)
+  [3DCR/low/bonsai] FID=4.8548  CMMD=1.4088  (n_fake_crops=370, n_ref_crops=370)
+  [Orig/low/bonsai] FID=12.8904  CMMD=1.6887  (n_fake_crops=370, n_ref_crops=370)
+  [wdr_pw/low/bonsai] FID=5.5825  CMMD=0.8132  (n_fake_crops=370, n_ref_crops=370)
+  [3DCR/high/counter] FID=4.9260  CMMD=0.4507  (n_fake_crops=300, n_ref_crops=300)
+  [Orig/high/counter] FID=11.0004  CMMD=0.9288  (n_fake_crops=300, n_ref_crops=300)
+  [wdr_pw/high/counter] FID=5.3634  CMMD=0.3721  (n_fake_crops=300, n_ref_crops=300)
+  [3DCR/mid/counter] FID=5.6707  CMMD=0.5673  (n_fake_crops=300, n_ref_crops=300)
+  [Orig/mid/counter] FID=13.3336  CMMD=1.2039  (n_fake_crops=300, n_ref_crops=300)
+  [wdr_pw/mid/counter] FID=6.6060  CMMD=0.5500  (n_fake_crops=300, n_ref_crops=300)
+  [3DCR/low/counter] FID=7.6577  CMMD=0.9577  (n_fake_crops=300, n_ref_crops=300)
+  [Orig/low/counter] FID=16.9170  CMMD=1.7220  (n_fake_crops=300, n_ref_crops=300)
+  [wdr_pw/low/counter] FID=7.6454  CMMD=0.6864  (n_fake_crops=300, n_ref_crops=300)
+  [3DCR/high/flowers] FID=6.8619  CMMD=0.4834  (n_fake_crops=220, n_ref_crops=220)
+  [Orig/high/flowers] FID=29.1801  CMMD=1.7048  (n_fake_crops=220, n_ref_crops=220)
+  [wdr_pw/high/flowers] FID=8.7046  CMMD=0.5751  (n_fake_crops=220, n_ref_crops=220)
+  [3DCR/mid/flowers] FID=7.3077  CMMD=0.5543  (n_fake_crops=220, n_ref_crops=220)
+  [Orig/mid/flowers] FID=32.7170  CMMD=2.2714  (n_fake_crops=220, n_ref_crops=220)
+  [wdr_pw/mid/flowers] FID=9.9062  CMMD=0.7129  (n_fake_crops=220, n_ref_crops=220)
+  [3DCR/low/flowers] FID=9.0485  CMMD=0.7068  (n_fake_crops=220, n_ref_crops=220)
+  [Orig/low/flowers] FID=40.5618  CMMD=2.9837  (n_fake_crops=220, n_ref_crops=220)
+  [wdr_pw/low/flowers] FID=12.5882  CMMD=0.8929  (n_fake_crops=210, n_ref_crops=220)
+  [3DCR/high/garden] FID=2.1908  CMMD=0.3659  (n_fake_crops=240, n_ref_crops=240)
+  [Orig/high/garden] FID=5.2259  CMMD=0.9547  (n_fake_crops=240, n_ref_crops=240)
+  [wdr_pw/high/garden] FID=2.5891  CMMD=0.1615  (n_fake_crops=240, n_ref_crops=240)
+  [3DCR/mid/garden] FID=2.9761  CMMD=0.5370  (n_fake_crops=240, n_ref_crops=240)
+  [Orig/mid/garden] FID=8.9718  CMMD=0.9869  (n_fake_crops=240, n_ref_crops=240)
+  [wdr_pw/mid/garden] FID=3.5852  CMMD=0.2850  (n_fake_crops=240, n_ref_crops=240)
+  [3DCR/low/garden] FID=3.9217  CMMD=0.7467  (n_fake_crops=240, n_ref_crops=240)
+  [Orig/low/garden] FID=16.4903  CMMD=1.4522  (n_fake_crops=240, n_ref_crops=240)
+  [wdr_pw/low/garden] FID=4.4826  CMMD=0.4039  (n_fake_crops=240, n_ref_crops=240)
+  [3DCR/high/kitchen] FID=2.8918  CMMD=0.2784  (n_fake_crops=290, n_ref_crops=290)
+  [Orig/high/kitchen] FID=4.5972  CMMD=0.6360  (n_fake_crops=290, n_ref_crops=290)
+  [wdr_pw/high/kitchen] FID=2.8095  CMMD=0.2096  (n_fake_crops=290, n_ref_crops=290)
+  [3DCR/mid/kitchen] FID=3.4060  CMMD=0.3976  (n_fake_crops=290, n_ref_crops=290)
+  [Orig/mid/kitchen] FID=6.3978  CMMD=0.6998  (n_fake_crops=290, n_ref_crops=290)
+  [wdr_pw/mid/kitchen] FID=3.5738  CMMD=0.2388  (n_fake_crops=290, n_ref_crops=290)
+  [3DCR/low/kitchen] FID=4.4811  CMMD=0.6268  (n_fake_crops=290, n_ref_crops=290)
+  [Orig/low/kitchen] FID=9.2969  CMMD=0.8345  (n_fake_crops=290, n_ref_crops=290)
+  [wdr_pw/low/kitchen] FID=4.8362  CMMD=0.3980  (n_fake_crops=290, n_ref_crops=290)
+Wrote /home/u4546465/iqa_eval/results/CAT3DGSPro_wdr_pw/fivecrop_nodownsample_per_scene.csv
+Wrote /home/u4546465/iqa_eval/results/CAT3DGSPro_wdr_pw/fivecrop_nodownsample_summary.csv

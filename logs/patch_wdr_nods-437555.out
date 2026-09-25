@@ -1,0 +1,95 @@
+Discovering views (ground truth from CAT3DGSPro_organized)...
+Found 9 scenes, 246 views total
+Building file records (methods=ALL 7)...
+Total (method,view) records: 1722 (each -> HiFiC two-grid 256x256 patches)
+Computing HiFiC-patch Inception (FID) + CLIP (CMMD) features (no_downsample=True)...
+Loading pretrained model Inception3 from /home/u4546465/.cache/torch/hub/pyiqa/pt_inception-2015-12-05-6726825d.pth
+  ref patches+features [50/246]
+  ref patches+features [100/246]
+  ref patches+features [150/246]
+  ref patches+features [200/246]
+  ref patches+features [246/246]
+  fake patches+features [100/1722]
+  fake patches+features [200/1722]
+  fake patches+features [300/1722]
+  fake patches+features [400/1722]
+  fake patches+features [500/1722]
+  fake patches+features [600/1722]
+  fake patches+features [700/1722]
+  fake patches+features [800/1722]
+  fake patches+features [900/1722]
+  fake patches+features [1000/1722]
+  fake patches+features [1100/1722]
+  fake patches+features [1200/1722]
+  fake patches+features [1300/1722]
+  fake patches+features [1400/1722]
+  fake patches+features [1500/1722]
+  fake patches+features [1600/1722]
+  fake patches+features [1700/1722]
+  fake patches+features [1722/1722]
+Computing per-scene FID + CMMD...
+  [low_rate_size1.35/bicycle] FID=97.5126  CMMD=1.5819  (n_fake_patches=975, n_ref_patches=975)
+  [low_rate_size1.35/bonsai] FID=79.3221  CMMD=0.8967  (n_fake_patches=1443, n_ref_patches=1443)
+  [low_rate_size1.35/counter] FID=102.8252  CMMD=1.4514  (n_fake_patches=1170, n_ref_patches=1170)
+  [low_rate_size1.35/flowers] FID=104.1830  CMMD=2.1619  (n_fake_patches=858, n_ref_patches=858)
+  [low_rate_size1.35/garden] FID=128.2470  CMMD=2.4022  (n_fake_patches=936, n_ref_patches=936)
+  [low_rate_size1.35/kitchen] FID=60.4170  CMMD=0.6803  (n_fake_patches=1365, n_ref_patches=1365)
+  [low_rate_size1.35/room] FID=92.3799  CMMD=1.1225  (n_fake_patches=1521, n_ref_patches=1521)
+  [low_rate_size1.35/stump] FID=95.6240  CMMD=1.7984  (n_fake_patches=624, n_ref_patches=624)
+  [low_rate_size1.35/treehill] FID=158.1519  CMMD=2.0170  (n_fake_patches=702, n_ref_patches=702)
+  [mid_rate_size3.2/bicycle] FID=45.3159  CMMD=0.7730  (n_fake_patches=975, n_ref_patches=975)
+  [mid_rate_size3.2/bonsai] FID=58.4519  CMMD=0.6280  (n_fake_patches=1443, n_ref_patches=1443)
+  [mid_rate_size3.2/counter] FID=89.0024  CMMD=1.1978  (n_fake_patches=1170, n_ref_patches=1170)
+  [mid_rate_size3.2/flowers] FID=62.4141  CMMD=1.3498  (n_fake_patches=858, n_ref_patches=858)
+  [mid_rate_size3.2/garden] FID=62.1855  CMMD=1.3334  (n_fake_patches=936, n_ref_patches=936)
+  [mid_rate_size3.2/kitchen] FID=40.8597  CMMD=0.4053  (n_fake_patches=1365, n_ref_patches=1365)
+  [mid_rate_size3.2/room] FID=74.6144  CMMD=0.9280  (n_fake_patches=1521, n_ref_patches=1521)
+  [mid_rate_size3.2/stump] FID=47.0460  CMMD=1.1306  (n_fake_patches=624, n_ref_patches=624)
+  [mid_rate_size3.2/treehill] FID=91.7751  CMMD=1.3722  (n_fake_patches=702, n_ref_patches=702)
+  [high_rate_size9.32/bicycle] FID=24.2615  CMMD=0.2779  (n_fake_patches=975, n_ref_patches=975)
+  [high_rate_size9.32/bonsai] FID=43.1349  CMMD=0.5050  (n_fake_patches=1443, n_ref_patches=1443)
+  [high_rate_size9.32/counter] FID=63.5534  CMMD=0.8006  (n_fake_patches=1170, n_ref_patches=1170)
+  [high_rate_size9.32/flowers] FID=42.3068  CMMD=0.7385  (n_fake_patches=858, n_ref_patches=858)
+  [high_rate_size9.32/garden] FID=24.2851  CMMD=0.2052  (n_fake_patches=936, n_ref_patches=936)
+  [high_rate_size9.32/kitchen] FID=28.1491  CMMD=0.2052  (n_fake_patches=1365, n_ref_patches=1365)
+  [high_rate_size9.32/room] FID=50.8032  CMMD=0.6133  (n_fake_patches=1521, n_ref_patches=1521)
+  [high_rate_size9.32/stump] FID=26.7288  CMMD=0.8011  (n_fake_patches=624, n_ref_patches=624)
+  [high_rate_size9.32/treehill] FID=48.4641  CMMD=0.8103  (n_fake_patches=702, n_ref_patches=702)
+  [wdr_refine_15k_same_psnr_as_catpro/bicycle] FID=50.6917  CMMD=0.5041  (n_fake_patches=975, n_ref_patches=975)
+  [wdr_refine_15k_same_psnr_as_catpro/bonsai] FID=45.4056  CMMD=0.3979  (n_fake_patches=1443, n_ref_patches=1443)
+  [wdr_refine_15k_same_psnr_as_catpro/counter] FID=73.6664  CMMD=0.5771  (n_fake_patches=1170, n_ref_patches=1170)
+  [wdr_refine_15k_same_psnr_as_catpro/flowers] FID=72.6884  CMMD=0.8870  (n_fake_patches=858, n_ref_patches=858)
+  [wdr_refine_15k_same_psnr_as_catpro/garden] FID=59.0918  CMMD=0.4585  (n_fake_patches=936, n_ref_patches=936)
+  [wdr_refine_15k_same_psnr_as_catpro/kitchen] FID=44.4627  CMMD=0.2602  (n_fake_patches=1365, n_ref_patches=1365)
+  [wdr_refine_15k_same_psnr_as_catpro/room] FID=49.7172  CMMD=0.4489  (n_fake_patches=1521, n_ref_patches=1521)
+  [wdr_refine_15k_same_psnr_as_catpro/stump] FID=76.9481  CMMD=1.1367  (n_fake_patches=624, n_ref_patches=624)
+  [wdr_refine_15k_same_psnr_as_catpro/treehill] FID=101.1730  CMMD=0.8724  (n_fake_patches=702, n_ref_patches=702)
+  [wdr_refinement_15k_highrate/bicycle] FID=23.4570  CMMD=0.1297  (n_fake_patches=975, n_ref_patches=975)
+  [wdr_refinement_15k_highrate/bonsai] FID=22.5338  CMMD=0.1692  (n_fake_patches=1443, n_ref_patches=1443)
+  [wdr_refinement_15k_highrate/counter] FID=45.1736  CMMD=0.2820  (n_fake_patches=1170, n_ref_patches=1170)
+  [wdr_refinement_15k_highrate/flowers] FID=41.7070  CMMD=0.3860  (n_fake_patches=858, n_ref_patches=858)
+  [wdr_refinement_15k_highrate/garden] FID=21.7895  CMMD=0.0749  (n_fake_patches=936, n_ref_patches=936)
+  [wdr_refinement_15k_highrate/kitchen] FID=21.5755  CMMD=0.0687  (n_fake_patches=1365, n_ref_patches=1365)
+  [wdr_refinement_15k_highrate/room] FID=26.4027  CMMD=0.2028  (n_fake_patches=1521, n_ref_patches=1521)
+  [wdr_refinement_15k_highrate/stump] FID=30.1722  CMMD=0.3933  (n_fake_patches=624, n_ref_patches=624)
+  [wdr_refinement_15k_highrate/treehill] FID=36.9393  CMMD=0.3641  (n_fake_patches=702, n_ref_patches=702)
+  [wdr_refinement_15k_lowrate/bicycle] FID=33.3263  CMMD=0.3990  (n_fake_patches=975, n_ref_patches=975)
+  [wdr_refinement_15k_lowrate/bonsai] FID=37.0035  CMMD=0.2590  (n_fake_patches=1443, n_ref_patches=1443)
+  [wdr_refinement_15k_lowrate/counter] FID=60.5694  CMMD=0.4798  (n_fake_patches=1170, n_ref_patches=1170)
+  [wdr_refinement_15k_lowrate/flowers] FID=56.6659  CMMD=0.7042  (n_fake_patches=858, n_ref_patches=858)
+  [wdr_refinement_15k_lowrate/garden] FID=33.7503  CMMD=0.3560  (n_fake_patches=936, n_ref_patches=936)
+  [wdr_refinement_15k_lowrate/kitchen] FID=36.0642  CMMD=0.1444  (n_fake_patches=1365, n_ref_patches=1365)
+  [wdr_refinement_15k_lowrate/room] FID=39.7078  CMMD=0.4317  (n_fake_patches=1521, n_ref_patches=1521)
+  [wdr_refinement_15k_lowrate/stump] FID=53.0563  CMMD=0.8768  (n_fake_patches=624, n_ref_patches=624)
+  [wdr_refinement_15k_lowrate/treehill] FID=59.8320  CMMD=0.7148  (n_fake_patches=702, n_ref_patches=702)
+  [wdr_refinement_15k_midrate/bicycle] FID=27.4954  CMMD=0.2089  (n_fake_patches=975, n_ref_patches=975)
+  [wdr_refinement_15k_midrate/bonsai] FID=28.6117  CMMD=0.2033  (n_fake_patches=1443, n_ref_patches=1443)
+  [wdr_refinement_15k_midrate/counter] FID=53.1187  CMMD=0.3873  (n_fake_patches=1170, n_ref_patches=1170)
+  [wdr_refinement_15k_midrate/flowers] FID=47.5310  CMMD=0.4934  (n_fake_patches=858, n_ref_patches=858)
+  [wdr_refinement_15k_midrate/garden] FID=27.4116  CMMD=0.1482  (n_fake_patches=936, n_ref_patches=936)
+  [wdr_refinement_15k_midrate/kitchen] FID=27.2389  CMMD=0.0865  (n_fake_patches=1365, n_ref_patches=1365)
+  [wdr_refinement_15k_midrate/room] FID=33.1468  CMMD=0.3275  (n_fake_patches=1521, n_ref_patches=1521)
+  [wdr_refinement_15k_midrate/stump] FID=41.3222  CMMD=0.5859  (n_fake_patches=624, n_ref_patches=624)
+  [wdr_refinement_15k_midrate/treehill] FID=43.3668  CMMD=0.4226  (n_fake_patches=702, n_ref_patches=702)
+Wrote /home/u4546465/iqa_eval/results/wdr/patch_nodownsample_per_scene.csv
+Wrote /home/u4546465/iqa_eval/results/wdr/patch_nodownsample_summary.csv

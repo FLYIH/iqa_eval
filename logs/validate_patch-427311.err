@@ -1,0 +1,38 @@
+/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/torch/utils/data/dataloader.py:626: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+FID a:   0%|          | 0/1 [00:00<?, ?it/s]FID a: 100%|██████████| 1/1 [00:00<00:00,  1.22it/s]FID a: 100%|██████████| 1/1 [00:00<00:00,  1.17it/s]
+FID b:   0%|          | 0/1 [00:00<?, ?it/s]FID b: 100%|██████████| 1/1 [00:00<00:00,  2.47it/s]FID b: 100%|██████████| 1/1 [00:00<00:00,  2.26it/s]
+Traceback (most recent call last):
+  File "/home/u4546465/iqa_eval/eval_fid_patch.py", line 347, in <module>
+    main()
+  File "/home/u4546465/iqa_eval/eval_fid_patch.py", line 320, in main
+    validate_against_pyiqa(args.device, d1, d2)
+  File "/home/u4546465/iqa_eval/eval_fid_patch.py", line 166, in validate_against_pyiqa
+    official_score = float(official(str(sample_dir_a), str(sample_dir_b)))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/pyiqa/models/inference_model.py", line 112, in forward
+    output = self.net(target, ref, device=device, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/pyiqa/archs/fid_arch.py", line 469, in forward
+    return frechet_distance(mu1, sig1, mu2, sig2)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/pyiqa/archs/fid_arch.py", line 159, in frechet_distance
+    covmean, _ = linalg.sqrtm(sigma1.dot(sigma2), disp=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: sqrtm() got an unexpected keyword argument 'disp'

@@ -1,0 +1,5 @@
+Validating custom Inception pipeline against pyiqa.create_metric('fid')...
+Loading pretrained model Inception3 from /home/u4546465/.cache/torch/hub/pyiqa/pt_inception-2015-12-05-6726825d.pth
+Computing FID between two folders
+Found 4 images in the folder /tmp/tmph63eehg1/a
+Found 4 images in the folder /tmp/tmph63eehg1/b

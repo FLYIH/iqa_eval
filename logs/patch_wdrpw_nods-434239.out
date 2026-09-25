@@ -1,0 +1,83 @@
+Discovering views...
+Found 6 scenes, 167 views total
+Building file records (methods={'wdr_pw', '3DCR', 'Orig'})...
+Total (method,rate,view) records: 1503 (each -> HiFiC two-grid 256x256 patches)
+Computing HiFiC-patch Inception (FID) + CLIP (CMMD) features (no_downsample=True)...
+Loading pretrained model Inception3 from /home/u4546465/.cache/torch/hub/pyiqa/pt_inception-2015-12-05-6726825d.pth
+  ref patches+features [50/167]
+  ref patches+features [100/167]
+  ref patches+features [150/167]
+  ref patches+features [167/167]
+  fake patches+features [100/1503]
+  fake patches+features [200/1503]
+  fake patches+features [300/1503]
+  fake patches+features [400/1503]
+  fake patches+features [500/1503]
+  fake patches+features [600/1503]
+  fake patches+features [700/1503]
+  fake patches+features [800/1503]
+  fake patches+features [900/1503]
+  fake patches+features [1000/1503]
+  fake patches+features [1100/1503]
+  fake patches+features [1200/1503]
+  fake patches+features [1300/1503]
+  fake patches+features [1400/1503]
+  fake patches+features [1500/1503]
+  fake patches+features [1503/1503]
+Computing per-scene FID + CMMD...
+  [3DCR/high/bicycle] FID=20.8434  CMMD=0.1528  (n_fake_patches=975, n_ref_patches=975)
+  [Orig/high/bicycle] FID=47.8953  CMMD=0.4444  (n_fake_patches=975, n_ref_patches=975)
+  [wdr_pw/high/bicycle] FID=23.4570  CMMD=0.1297  (n_fake_patches=975, n_ref_patches=975)
+  [3DCR/mid/bicycle] FID=23.7336  CMMD=0.1719  (n_fake_patches=975, n_ref_patches=975)
+  [Orig/mid/bicycle] FID=68.8115  CMMD=0.7838  (n_fake_patches=975, n_ref_patches=975)
+  [wdr_pw/mid/bicycle] FID=27.4954  CMMD=0.2089  (n_fake_patches=975, n_ref_patches=975)
+  [3DCR/low/bicycle] FID=27.1747  CMMD=0.2350  (n_fake_patches=975, n_ref_patches=975)
+  [Orig/low/bicycle] FID=99.2064  CMMD=1.3585  (n_fake_patches=975, n_ref_patches=975)
+  [wdr_pw/low/bicycle] FID=33.3263  CMMD=0.3990  (n_fake_patches=975, n_ref_patches=975)
+  [3DCR/high/bonsai] FID=21.5066  CMMD=0.1370  (n_fake_patches=1443, n_ref_patches=1443)
+  [Orig/high/bonsai] FID=47.5135  CMMD=0.4963  (n_fake_patches=1443, n_ref_patches=1443)
+  [wdr_pw/high/bonsai] FID=22.5338  CMMD=0.1692  (n_fake_patches=1443, n_ref_patches=1443)
+  [3DCR/mid/bonsai] FID=25.9271  CMMD=0.1915  (n_fake_patches=1443, n_ref_patches=1443)
+  [Orig/mid/bonsai] FID=57.6807  CMMD=0.6202  (n_fake_patches=1443, n_ref_patches=1443)
+  [wdr_pw/mid/bonsai] FID=29.1231  CMMD=0.2017  (n_fake_patches=1404, n_ref_patches=1443)
+  [3DCR/low/bonsai] FID=32.9496  CMMD=0.2861  (n_fake_patches=1443, n_ref_patches=1443)
+  [Orig/low/bonsai] FID=71.6935  CMMD=0.7763  (n_fake_patches=1443, n_ref_patches=1443)
+  [wdr_pw/low/bonsai] FID=37.0035  CMMD=0.2590  (n_fake_patches=1443, n_ref_patches=1443)
+  [3DCR/high/counter] FID=43.7772  CMMD=0.3434  (n_fake_patches=1170, n_ref_patches=1170)
+  [Orig/high/counter] FID=79.1807  CMMD=0.7148  (n_fake_patches=1170, n_ref_patches=1170)
+  [wdr_pw/high/counter] FID=45.1736  CMMD=0.2820  (n_fake_patches=1170, n_ref_patches=1170)
+  [3DCR/mid/counter] FID=49.0691  CMMD=0.4200  (n_fake_patches=1170, n_ref_patches=1170)
+  [Orig/mid/counter] FID=92.9814  CMMD=0.9795  (n_fake_patches=1170, n_ref_patches=1170)
+  [wdr_pw/mid/counter] FID=53.1187  CMMD=0.3873  (n_fake_patches=1170, n_ref_patches=1170)
+  [3DCR/low/counter] FID=62.1919  CMMD=0.6658  (n_fake_patches=1170, n_ref_patches=1170)
+  [Orig/low/counter] FID=110.7264  CMMD=1.2959  (n_fake_patches=1170, n_ref_patches=1170)
+  [wdr_pw/low/counter] FID=60.5694  CMMD=0.4798  (n_fake_patches=1170, n_ref_patches=1170)
+  [3DCR/high/flowers] FID=33.3787  CMMD=0.3735  (n_fake_patches=858, n_ref_patches=858)
+  [Orig/high/flowers] FID=101.2520  CMMD=1.1958  (n_fake_patches=858, n_ref_patches=858)
+  [wdr_pw/high/flowers] FID=41.7070  CMMD=0.3860  (n_fake_patches=858, n_ref_patches=858)
+  [3DCR/mid/flowers] FID=36.8940  CMMD=0.4742  (n_fake_patches=858, n_ref_patches=858)
+  [Orig/mid/flowers] FID=118.0696  CMMD=1.4454  (n_fake_patches=858, n_ref_patches=858)
+  [wdr_pw/mid/flowers] FID=47.5310  CMMD=0.4934  (n_fake_patches=858, n_ref_patches=858)
+  [3DCR/low/flowers] FID=42.6799  CMMD=0.6356  (n_fake_patches=858, n_ref_patches=858)
+  [Orig/low/flowers] FID=142.2989  CMMD=1.7108  (n_fake_patches=858, n_ref_patches=858)
+  [wdr_pw/low/flowers] FID=57.9455  CMMD=0.7108  (n_fake_patches=819, n_ref_patches=858)
+  [3DCR/high/garden] FID=19.6821  CMMD=0.1189  (n_fake_patches=936, n_ref_patches=936)
+  [Orig/high/garden] FID=45.7117  CMMD=0.2191  (n_fake_patches=936, n_ref_patches=936)
+  [wdr_pw/high/garden] FID=21.7895  CMMD=0.0749  (n_fake_patches=936, n_ref_patches=936)
+  [3DCR/mid/garden] FID=24.6981  CMMD=0.2788  (n_fake_patches=936, n_ref_patches=936)
+  [Orig/mid/garden] FID=70.7418  CMMD=0.5270  (n_fake_patches=936, n_ref_patches=936)
+  [wdr_pw/mid/garden] FID=27.4116  CMMD=0.1482  (n_fake_patches=936, n_ref_patches=936)
+  [3DCR/low/garden] FID=31.4562  CMMD=0.4572  (n_fake_patches=936, n_ref_patches=936)
+  [Orig/low/garden] FID=112.3225  CMMD=1.1840  (n_fake_patches=936, n_ref_patches=936)
+  [wdr_pw/low/garden] FID=33.7503  CMMD=0.3560  (n_fake_patches=936, n_ref_patches=936)
+  [3DCR/high/kitchen] FID=24.6318  CMMD=0.0923  (n_fake_patches=1131, n_ref_patches=1131)
+  [Orig/high/kitchen] FID=37.9281  CMMD=0.2122  (n_fake_patches=1131, n_ref_patches=1131)
+  [wdr_pw/high/kitchen] FID=24.2976  CMMD=0.0671  (n_fake_patches=1131, n_ref_patches=1131)
+  [3DCR/mid/kitchen] FID=30.0631  CMMD=0.1293  (n_fake_patches=1131, n_ref_patches=1131)
+  [Orig/mid/kitchen] FID=51.1324  CMMD=0.3353  (n_fake_patches=1131, n_ref_patches=1131)
+  [wdr_pw/mid/kitchen] FID=30.7121  CMMD=0.0859  (n_fake_patches=1131, n_ref_patches=1131)
+  [3DCR/low/kitchen] FID=37.2458  CMMD=0.2098  (n_fake_patches=1131, n_ref_patches=1131)
+  [Orig/low/kitchen] FID=69.4464  CMMD=0.5066  (n_fake_patches=1131, n_ref_patches=1131)
+  [wdr_pw/low/kitchen] FID=40.6541  CMMD=0.1431  (n_fake_patches=1131, n_ref_patches=1131)
+Wrote /home/u4546465/iqa_eval/results/CAT3DGSPro_wdr_pw/patch_nodownsample_per_scene.csv
+Wrote /home/u4546465/iqa_eval/results/CAT3DGSPro_wdr_pw/patch_nodownsample_summary.csv

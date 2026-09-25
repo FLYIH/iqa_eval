@@ -1,0 +1,21 @@
+Loading pretrained model LPIPS from /home/u4546465/.cache/torch/hub/pyiqa/LPIPS_v0.1_vgg-a78928a0.pth
+Loading pretrained model DISTS from /home/u4546465/.cache/torch/hub/pyiqa/DISTS_weights-f5e65c96.pth
+  done 2dgs_textured/bicycle (25 views)
+  done 2dgs_textured/bonsai (37 views)
+  done 2dgs_textured/counter (30 views)
+  done 2dgs_textured/flowers (22 views)
+  done 2dgs_textured/garden (24 views)
+  done 2dgs_textured/kitchen (35 views)
+  done 2dgs_textured/room (39 views)
+  done 2dgs_textured/stump (16 views)
+  done 2dgs_textured/treehill (18 views)
+  done 2dgs_textured_crn_wd/bicycle (25 views)
+  done 2dgs_textured_crn_wd/bonsai (37 views)
+  done 2dgs_textured_crn_wd/counter (30 views)
+  done 2dgs_textured_crn_wd/flowers (22 views)
+  done 2dgs_textured_crn_wd/garden (24 views)
+  done 2dgs_textured_crn_wd/kitchen (35 views)
+  done 2dgs_textured_crn_wd/room (39 views)
+  done 2dgs_textured_crn_wd/stump (16 views)
+  done 2dgs_textured_crn_wd/treehill (18 views)
+Wrote /home/u4546465/iqa_eval/results/tg_compare_texture/texture_per_scene.csv and texture_summary.csv

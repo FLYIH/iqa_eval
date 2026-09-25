@@ -64,7 +64,7 @@ EXTERNAL_METHODS = {
         "rate_dirs": {"high": "High (0.002)", "mid": "Mid (0.007)", "low": "Low (0.05)"},
     },
     "HAC_ori": {
-        "subdir": "HACplus+CR/HAC_ori",
+        "subdir": "HAC_ori",
         "rate_dirs": {"high": "High (0.003)", "mid": "Mid (0.01)", "low": "Low (0.06)"},
     },
 }
@@ -120,7 +120,7 @@ def build_records(cat3dgs_root, hac_root, scenes, methods=None):
     methods: optional set of method names to restrict to (default: all)."""
     records = []
     _, ref_paths = discover_views(cat3dgs_root)
-    embedded_methods = [m for m in ["3DCR", "Orig"] if methods is None or m in methods]
+    embedded_methods = [m for m in ["3DCR", "Orig", "wdr_pw"] if methods is None or m in methods]
     external_methods = {n: c for n, c in EXTERNAL_METHODS.items() if methods is None or n in methods}
 
     for scene, idxs in scenes.items():

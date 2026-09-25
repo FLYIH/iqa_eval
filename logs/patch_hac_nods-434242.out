@@ -1,0 +1,49 @@
+Discovering views...
+Found 9 scenes, 246 views total
+Building file records (methods={'HACplus+CR'})...
+Total (method,rate,view) records: 738 (each -> HiFiC two-grid 256x256 patches)
+Computing HiFiC-patch Inception (FID) + CLIP (CMMD) features (no_downsample=True)...
+Loading pretrained model Inception3 from /home/u4546465/.cache/torch/hub/pyiqa/pt_inception-2015-12-05-6726825d.pth
+  ref patches+features [50/246]
+  ref patches+features [100/246]
+  ref patches+features [150/246]
+  ref patches+features [200/246]
+  ref patches+features [246/246]
+  fake patches+features [100/738]
+  fake patches+features [200/738]
+  fake patches+features [300/738]
+  fake patches+features [400/738]
+  fake patches+features [500/738]
+  fake patches+features [600/738]
+  fake patches+features [700/738]
+  fake patches+features [738/738]
+Computing per-scene FID + CMMD...
+  [HACplus+CR/high/bicycle] FID=21.1351  CMMD=0.1450  (n_fake_patches=975, n_ref_patches=975)
+  [HACplus+CR/mid/bicycle] FID=21.8040  CMMD=0.1659  (n_fake_patches=975, n_ref_patches=975)
+  [HACplus+CR/low/bicycle] FID=26.7686  CMMD=0.2704  (n_fake_patches=975, n_ref_patches=975)
+  [HACplus+CR/high/bonsai] FID=20.3269  CMMD=0.1657  (n_fake_patches=1443, n_ref_patches=1443)
+  [HACplus+CR/mid/bonsai] FID=21.9985  CMMD=0.1838  (n_fake_patches=1443, n_ref_patches=1443)
+  [HACplus+CR/low/bonsai] FID=28.3710  CMMD=0.2671  (n_fake_patches=1443, n_ref_patches=1443)
+  [HACplus+CR/high/counter] FID=40.4894  CMMD=0.2288  (n_fake_patches=1170, n_ref_patches=1170)
+  [HACplus+CR/mid/counter] FID=53.0892  CMMD=0.3036  (n_fake_patches=1170, n_ref_patches=1170)
+  [HACplus+CR/low/counter] FID=57.2387  CMMD=0.5198  (n_fake_patches=1170, n_ref_patches=1170)
+  [HACplus+CR/high/flowers] FID=35.1768  CMMD=0.4251  (n_fake_patches=858, n_ref_patches=858)
+  [HACplus+CR/mid/flowers] FID=36.1262  CMMD=0.4842  (n_fake_patches=858, n_ref_patches=858)
+  [HACplus+CR/low/flowers] FID=44.8784  CMMD=0.6899  (n_fake_patches=858, n_ref_patches=858)
+  [HACplus+CR/high/garden] FID=19.5059  CMMD=0.1910  (n_fake_patches=936, n_ref_patches=936)
+  [HACplus+CR/mid/garden] FID=22.1461  CMMD=0.3330  (n_fake_patches=936, n_ref_patches=936)
+  [HACplus+CR/low/garden] FID=31.9636  CMMD=0.4101  (n_fake_patches=936, n_ref_patches=936)
+  [HACplus+CR/high/kitchen] FID=21.1469  CMMD=0.0947  (n_fake_patches=1365, n_ref_patches=1365)
+  [HACplus+CR/mid/kitchen] FID=22.7275  CMMD=0.0999  (n_fake_patches=1365, n_ref_patches=1365)
+  [HACplus+CR/low/kitchen] FID=30.8996  CMMD=0.1825  (n_fake_patches=1365, n_ref_patches=1365)
+  [HACplus+CR/high/room] FID=25.5933  CMMD=0.1425  (n_fake_patches=1521, n_ref_patches=1521)
+  [HACplus+CR/mid/room] FID=27.9781  CMMD=0.1723  (n_fake_patches=1521, n_ref_patches=1521)
+  [HACplus+CR/low/room] FID=35.0132  CMMD=0.2706  (n_fake_patches=1521, n_ref_patches=1521)
+  [HACplus+CR/high/stump] FID=25.4730  CMMD=0.4113  (n_fake_patches=624, n_ref_patches=624)
+  [HACplus+CR/mid/stump] FID=26.0245  CMMD=0.4932  (n_fake_patches=624, n_ref_patches=624)
+  [HACplus+CR/low/stump] FID=29.4970  CMMD=0.7405  (n_fake_patches=624, n_ref_patches=624)
+  [HACplus+CR/high/treehill] FID=29.6919  CMMD=0.3477  (n_fake_patches=702, n_ref_patches=702)
+  [HACplus+CR/mid/treehill] FID=33.2688  CMMD=0.4297  (n_fake_patches=702, n_ref_patches=702)
+  [HACplus+CR/low/treehill] FID=46.0147  CMMD=0.6770  (n_fake_patches=702, n_ref_patches=702)
+Wrote /home/u4546465/iqa_eval/results/HACplus+CR/patch_nodownsample_per_scene.csv
+Wrote /home/u4546465/iqa_eval/results/HACplus+CR/patch_nodownsample_summary.csv

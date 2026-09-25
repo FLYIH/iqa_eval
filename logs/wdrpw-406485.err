@@ -1,0 +1,71 @@
+/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/392 [00:00<?, ?it/s]Loading weights: 100%|██████████| 392/392 [00:00<00:00, 42928.65it/s]
+[transformers] [1mCLIPVisionModelWithProjection LOAD REPORT[0m from: openai/clip-vit-large-patch14-336
+Key                                                          | Status     |  | 
+-------------------------------------------------------------+------------+--+-
+text_model.encoder.layers.{0...11}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc1.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc1.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc2.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm2.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm1.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm2.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm1.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc2.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.out_proj.weight | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+text_projection.weight                                       | UNEXPECTED |  | 
+text_model.final_layer_norm.bias                             | UNEXPECTED |  | 
+logit_scale                                                  | UNEXPECTED |  | 
+text_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+text_model.final_layer_norm.weight                           | UNEXPECTED |  | 
+text_model.embeddings.token_embedding.weight                 | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Traceback (most recent call last):
+  File "/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/PIL/ImageFile.py", line 392, in load
+    s = read(read_bytes)
+        ^^^^^^^^^^^^^^^^
+  File "/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/PIL/PngImagePlugin.py", line 1002, in load_read
+    cid, pos, length = self.png.read()
+                       ^^^^^^^^^^^^^^^
+  File "/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/PIL/PngImagePlugin.py", line 179, in read
+    length = i32(s)
+             ^^^^^^
+  File "/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/PIL/_binary.py", line 96, in i32be
+    return unpack_from(">I", c, o)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^
+struct.error: unpack_from requires a buffer of at least 4 bytes for unpacking 4 bytes at offset 0 (actual buffer size is 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/u4546465/iqa_eval/eval_fid_cmmd_fivecrop.py", line 226, in <module>
+    main()
+  File "/home/u4546465/iqa_eval/eval_fid_cmmd_fivecrop.py", line 215, in main
+    fake_fid, fake_cmmd, ref_fid, ref_cmmd = compute_all_crops_and_features(
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/u4546465/iqa_eval/eval_fid_cmmd_fivecrop.py", line 107, in compute_all_crops_and_features
+    fake_fid[key], fake_cmmd[key] = feats_for(r["path"])
+                                    ^^^^^^^^^^^^^^^^^^^^
+  File "/home/u4546465/iqa_eval/eval_fid_cmmd_fivecrop.py", line 87, in feats_for
+    crops = five_crop_and_flip(path)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/u4546465/iqa_eval/eval_fid_cmmd_fivecrop.py", line 70, in five_crop_and_flip
+    im = np.array(Image.open(img_path).convert("RGB"))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/PIL/Image.py", line 1069, in convert
+    self.load()
+  File "/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/PIL/ImageFile.py", line 399, in load
+    raise OSError(msg) from e
+OSError: image file is truncated

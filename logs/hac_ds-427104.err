@@ -1,0 +1,37 @@
+/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+Traceback (most recent call last):
+  File "/home/u4546465/iqa_eval/eval_fid_cmmd_fivecrop.py", line 231, in <module>
+    main()
+  File "/home/u4546465/iqa_eval/eval_fid_cmmd_fivecrop.py", line 220, in main
+    fake_fid, fake_cmmd, ref_fid, ref_cmmd = compute_all_crops_and_features(
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/u4546465/iqa_eval/eval_fid_cmmd_fivecrop.py", line 83, in compute_all_crops_and_features
+    inception = InceptionFeatureExtractor(device)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/u4546465/iqa_eval/eval_fid_patch.py", line 97, in __init__
+    self.model = InceptionV3(output_blocks=[block_idx]).to(device).eval()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1355, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/torch/nn/modules/module.py", line 915, in _apply
+    module._apply(fn)
+  File "/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/torch/nn/modules/module.py", line 915, in _apply
+    module._apply(fn)
+  File "/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/torch/nn/modules/module.py", line 915, in _apply
+    module._apply(fn)
+  [Previous line repeated 1 more time]
+  File "/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/torch/nn/modules/module.py", line 942, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "/home/u4546465/.conda/envs/wd/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1341, in convert
+    return t.to(
+           ^^^^^
+RuntimeError: CUDA error: CUDA-capable device(s) is/are busy or unavailable
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+

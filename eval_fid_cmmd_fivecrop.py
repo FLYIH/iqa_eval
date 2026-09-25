@@ -104,7 +104,10 @@ def compute_all_crops_and_features(records, ref_paths, device, no_downsample=Fal
     n = len(records)
     for i, r in enumerate(records):
         key = (r["method"], r["rate"], r["scene"], r["idx"])
-        fake_fid[key], fake_cmmd[key] = feats_for(r["path"])
+        try:
+            fake_fid[key], fake_cmmd[key] = feats_for(r["path"])
+        except OSError as e:
+            print(f"WARNING: skipping unreadable image {r['path']}: {e}", file=sys.stderr)
         if (i + 1) % 100 == 0 or i == n - 1:
             print(f"  fake crops+features [{i+1}/{n}]")
 
@@ -116,6 +119,8 @@ def compute_per_scene(records, ref_fid, ref_cmmd, fake_fid, fake_cmmd):
     by_scene_cmmd = defaultdict(list)
     for r in records:
         key = (r["method"], r["rate"], r["scene"], r["idx"])
+        if key not in fake_fid:
+            continue
         by_scene_fid[(r["method"], r["rate"], r["scene"])].append(fake_fid[key])
         by_scene_cmmd[(r["method"], r["rate"], r["scene"])].append(fake_cmmd[key])
 

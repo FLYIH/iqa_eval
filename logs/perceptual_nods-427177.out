@@ -1,0 +1,37 @@
+Discovering views...
+Found 9 scenes, 246 views total
+Building file records (methods=ALL)...
+Total (method,view) records: 492 (each -> 10 five-crop+flip sub-images)
+Computing five-crop Inception (FID) + CLIP (CMMD) features (no_downsample=True)...
+Loading pretrained model Inception3 from /home/u4546465/.cache/torch/hub/pyiqa/pt_inception-2015-12-05-6726825d.pth
+  ref crops+features [50/246]
+  ref crops+features [100/246]
+  ref crops+features [150/246]
+  ref crops+features [200/246]
+  ref crops+features [246/246]
+  fake crops+features [100/492]
+  fake crops+features [200/492]
+  fake crops+features [300/492]
+  fake crops+features [400/492]
+  fake crops+features [492/492]
+Computing per-scene FID + CMMD...
+  [perceptual/bicycle] FID=3.4330  CMMD=0.2782  (n_fake_crops=250, n_ref_crops=250)
+  [perceptual_3dcr/bicycle] FID=2.9580  CMMD=0.2787  (n_fake_crops=250, n_ref_crops=250)
+  [perceptual/bonsai] FID=6.3473  CMMD=0.6557  (n_fake_crops=370, n_ref_crops=370)
+  [perceptual_3dcr/bonsai] FID=2.6890  CMMD=0.5523  (n_fake_crops=370, n_ref_crops=370)
+  [perceptual/counter] FID=6.9565  CMMD=0.5761  (n_fake_crops=300, n_ref_crops=300)
+  [perceptual_3dcr/counter] FID=3.7324  CMMD=0.2824  (n_fake_crops=300, n_ref_crops=300)
+  [perceptual/flowers] FID=11.5393  CMMD=0.4740  (n_fake_crops=220, n_ref_crops=220)
+  [perceptual_3dcr/flowers] FID=6.5461  CMMD=0.3177  (n_fake_crops=220, n_ref_crops=220)
+  [perceptual/garden] FID=2.7048  CMMD=0.7576  (n_fake_crops=240, n_ref_crops=240)
+  [perceptual_3dcr/garden] FID=1.7958  CMMD=0.3030  (n_fake_crops=240, n_ref_crops=240)
+  [perceptual/kitchen] FID=3.2380  CMMD=0.4939  (n_fake_crops=350, n_ref_crops=350)
+  [perceptual_3dcr/kitchen] FID=2.5514  CMMD=0.1854  (n_fake_crops=350, n_ref_crops=350)
+  [perceptual/room] FID=8.3081  CMMD=0.4445  (n_fake_crops=390, n_ref_crops=390)
+  [perceptual_3dcr/room] FID=4.0413  CMMD=0.2441  (n_fake_crops=390, n_ref_crops=390)
+  [perceptual/stump] FID=4.6556  CMMD=0.6911  (n_fake_crops=160, n_ref_crops=160)
+  [perceptual_3dcr/stump] FID=4.3425  CMMD=0.4246  (n_fake_crops=160, n_ref_crops=160)
+  [perceptual/treehill] FID=15.3582  CMMD=0.6096  (n_fake_crops=180, n_ref_crops=180)
+  [perceptual_3dcr/treehill] FID=9.7912  CMMD=0.5692  (n_fake_crops=180, n_ref_crops=180)
+Wrote /home/u4546465/iqa_eval/results/Perceptual_gs/tgcompare_nodownsample_per_scene.csv
+Wrote /home/u4546465/iqa_eval/results/Perceptual_gs/tgcompare_nodownsample_summary.csv

@@ -1,0 +1,60 @@
+Discovering views...
+Found 9 scenes, 246 views total
+Building file records (methods=ALL)...
+Total (method,view) records: 984 (each -> 10 five-crop+flip sub-images)
+Computing five-crop Inception (FID) + CLIP (CMMD) features (no_downsample=False)...
+Loading pretrained model Inception3 from /home/u4546465/.cache/torch/hub/pyiqa/pt_inception-2015-12-05-6726825d.pth
+  ref crops+features [50/246]
+  ref crops+features [100/246]
+  ref crops+features [150/246]
+  ref crops+features [200/246]
+  ref crops+features [246/246]
+  fake crops+features [100/984]
+  fake crops+features [200/984]
+  fake crops+features [300/984]
+  fake crops+features [400/984]
+  fake crops+features [500/984]
+  fake crops+features [600/984]
+  fake crops+features [700/984]
+  fake crops+features [800/984]
+  fake crops+features [900/984]
+  fake crops+features [984/984]
+Computing per-scene FID + CMMD...
+  [2dgs/bicycle] FID=24.5100  CMMD=0.4880  (n_fake_crops=250, n_ref_crops=250)
+  [2dgs_crn_wd/bicycle] FID=10.7234  CMMD=0.0523  (n_fake_crops=250, n_ref_crops=250)
+  [2dgs_textured/bicycle] FID=26.0585  CMMD=0.4501  (n_fake_crops=250, n_ref_crops=250)
+  [2dgs_textured_crn_wd/bicycle] FID=11.0621  CMMD=0.0744  (n_fake_crops=250, n_ref_crops=250)
+  [2dgs/bonsai] FID=61.0619  CMMD=0.8198  (n_fake_crops=370, n_ref_crops=370)
+  [2dgs_crn_wd/bonsai] FID=29.9893  CMMD=0.7421  (n_fake_crops=370, n_ref_crops=370)
+  [2dgs_textured/bonsai] FID=71.7696  CMMD=1.0146  (n_fake_crops=370, n_ref_crops=370)
+  [2dgs_textured_crn_wd/bonsai] FID=37.8227  CMMD=1.0037  (n_fake_crops=370, n_ref_crops=370)
+  [2dgs/counter] FID=65.4921  CMMD=0.4117  (n_fake_crops=300, n_ref_crops=300)
+  [2dgs_crn_wd/counter] FID=32.2957  CMMD=0.2543  (n_fake_crops=300, n_ref_crops=300)
+  [2dgs_textured/counter] FID=77.9322  CMMD=0.6018  (n_fake_crops=300, n_ref_crops=300)
+  [2dgs_textured_crn_wd/counter] FID=38.3010  CMMD=0.5521  (n_fake_crops=300, n_ref_crops=300)
+  [2dgs/flowers] FID=135.0476  CMMD=2.0808  (n_fake_crops=220, n_ref_crops=220)
+  [2dgs_crn_wd/flowers] FID=32.0927  CMMD=0.1796  (n_fake_crops=220, n_ref_crops=220)
+  [2dgs_textured/flowers] FID=152.1732  CMMD=2.2895  (n_fake_crops=220, n_ref_crops=220)
+  [2dgs_textured_crn_wd/flowers] FID=35.5035  CMMD=0.2637  (n_fake_crops=220, n_ref_crops=220)
+  [2dgs/garden] FID=23.3944  CMMD=0.2692  (n_fake_crops=240, n_ref_crops=240)
+  [2dgs_crn_wd/garden] FID=12.7989  CMMD=0.0309  (n_fake_crops=240, n_ref_crops=240)
+  [2dgs_textured/garden] FID=25.6298  CMMD=0.3040  (n_fake_crops=240, n_ref_crops=240)
+  [2dgs_textured_crn_wd/garden] FID=13.8822  CMMD=0.0317  (n_fake_crops=240, n_ref_crops=240)
+  [2dgs/kitchen] FID=21.5416  CMMD=0.3302  (n_fake_crops=350, n_ref_crops=350)
+  [2dgs_crn_wd/kitchen] FID=16.3528  CMMD=0.1919  (n_fake_crops=350, n_ref_crops=350)
+  [2dgs_textured/kitchen] FID=27.6367  CMMD=0.3202  (n_fake_crops=350, n_ref_crops=350)
+  [2dgs_textured_crn_wd/kitchen] FID=19.7227  CMMD=0.2642  (n_fake_crops=350, n_ref_crops=350)
+  [2dgs/room] FID=39.7448  CMMD=0.3543  (n_fake_crops=390, n_ref_crops=390)
+  [2dgs_crn_wd/room] FID=19.0247  CMMD=0.2089  (n_fake_crops=390, n_ref_crops=390)
+  [2dgs_textured/room] FID=46.0993  CMMD=0.3898  (n_fake_crops=390, n_ref_crops=390)
+  [2dgs_textured_crn_wd/room] FID=24.5664  CMMD=0.3364  (n_fake_crops=390, n_ref_crops=390)
+  [2dgs/stump] FID=115.9013  CMMD=0.7370  (n_fake_crops=160, n_ref_crops=160)
+  [2dgs_crn_wd/stump] FID=50.8395  CMMD=0.1965  (n_fake_crops=160, n_ref_crops=160)
+  [2dgs_textured/stump] FID=134.1633  CMMD=0.7504  (n_fake_crops=160, n_ref_crops=160)
+  [2dgs_textured_crn_wd/stump] FID=56.8358  CMMD=0.2472  (n_fake_crops=160, n_ref_crops=160)
+  [2dgs/treehill] FID=75.2302  CMMD=1.3920  (n_fake_crops=180, n_ref_crops=180)
+  [2dgs_crn_wd/treehill] FID=19.4781  CMMD=0.1791  (n_fake_crops=180, n_ref_crops=180)
+  [2dgs_textured/treehill] FID=82.1625  CMMD=1.5471  (n_fake_crops=180, n_ref_crops=180)
+  [2dgs_textured_crn_wd/treehill] FID=20.4875  CMMD=0.1926  (n_fake_crops=180, n_ref_crops=180)
+Wrote /home/u4546465/iqa_eval/results/tg_compare_100k/tgcompare_per_scene.csv
+Wrote /home/u4546465/iqa_eval/results/tg_compare_100k/tgcompare_summary.csv

@@ -1,0 +1,49 @@
+Discovering views...
+Found 9 scenes, 246 views total
+Building file records (methods={'HACplus+CR'})...
+Total (method,rate,view) records: 738 (each -> 10 five-crop+flip sub-images)
+Computing five-crop Inception (FID) + CLIP (CMMD) features for all fake + reference images (no_downsample=False)...
+Loading pretrained model Inception3 from /home/u4546465/.cache/torch/hub/pyiqa/pt_inception-2015-12-05-6726825d.pth
+  ref crops+features [50/246]
+  ref crops+features [100/246]
+  ref crops+features [150/246]
+  ref crops+features [200/246]
+  ref crops+features [246/246]
+  fake crops+features [100/738]
+  fake crops+features [200/738]
+  fake crops+features [300/738]
+  fake crops+features [400/738]
+  fake crops+features [500/738]
+  fake crops+features [600/738]
+  fake crops+features [700/738]
+  fake crops+features [738/738]
+Computing per-scene FID + CMMD...
+  [HACplus+CR/high/bicycle] FID=7.7514  CMMD=0.0451  (n_fake_crops=250, n_ref_crops=250)
+  [HACplus+CR/mid/bicycle] FID=8.3133  CMMD=0.0393  (n_fake_crops=250, n_ref_crops=250)
+  [HACplus+CR/low/bicycle] FID=9.4552  CMMD=0.0582  (n_fake_crops=250, n_ref_crops=250)
+  [HACplus+CR/high/bonsai] FID=12.8116  CMMD=0.0625  (n_fake_crops=370, n_ref_crops=370)
+  [HACplus+CR/mid/bonsai] FID=14.0048  CMMD=0.0741  (n_fake_crops=370, n_ref_crops=370)
+  [HACplus+CR/low/bonsai] FID=18.1365  CMMD=0.1007  (n_fake_crops=370, n_ref_crops=370)
+  [HACplus+CR/high/counter] FID=22.4413  CMMD=0.0237  (n_fake_crops=300, n_ref_crops=300)
+  [HACplus+CR/mid/counter] FID=30.9679  CMMD=0.0472  (n_fake_crops=300, n_ref_crops=300)
+  [HACplus+CR/low/counter] FID=31.2760  CMMD=0.0911  (n_fake_crops=300, n_ref_crops=300)
+  [HACplus+CR/high/flowers] FID=22.8754  CMMD=0.0646  (n_fake_crops=220, n_ref_crops=220)
+  [HACplus+CR/mid/flowers] FID=24.9729  CMMD=0.0669  (n_fake_crops=220, n_ref_crops=220)
+  [HACplus+CR/low/flowers] FID=28.3816  CMMD=0.1096  (n_fake_crops=220, n_ref_crops=220)
+  [HACplus+CR/high/garden] FID=9.7278  CMMD=0.0054  (n_fake_crops=240, n_ref_crops=240)
+  [HACplus+CR/mid/garden] FID=10.9189  CMMD=0.0087  (n_fake_crops=240, n_ref_crops=240)
+  [HACplus+CR/low/garden] FID=13.1323  CMMD=0.0328  (n_fake_crops=240, n_ref_crops=240)
+  [HACplus+CR/high/kitchen] FID=9.8789  CMMD=0.0181  (n_fake_crops=350, n_ref_crops=350)
+  [HACplus+CR/mid/kitchen] FID=11.1566  CMMD=0.0237  (n_fake_crops=350, n_ref_crops=350)
+  [HACplus+CR/low/kitchen] FID=15.9563  CMMD=0.0412  (n_fake_crops=350, n_ref_crops=350)
+  [HACplus+CR/high/room] FID=13.4862  CMMD=0.0343  (n_fake_crops=390, n_ref_crops=390)
+  [HACplus+CR/mid/room] FID=15.0542  CMMD=0.0402  (n_fake_crops=390, n_ref_crops=390)
+  [HACplus+CR/low/room] FID=20.3758  CMMD=0.0743  (n_fake_crops=390, n_ref_crops=390)
+  [HACplus+CR/high/stump] FID=34.2352  CMMD=0.0435  (n_fake_crops=160, n_ref_crops=160)
+  [HACplus+CR/mid/stump] FID=32.8474  CMMD=0.0403  (n_fake_crops=160, n_ref_crops=160)
+  [HACplus+CR/low/stump] FID=38.9804  CMMD=0.0975  (n_fake_crops=160, n_ref_crops=160)
+  [HACplus+CR/high/treehill] FID=14.5868  CMMD=0.0544  (n_fake_crops=180, n_ref_crops=180)
+  [HACplus+CR/mid/treehill] FID=15.7259  CMMD=0.0589  (n_fake_crops=180, n_ref_crops=180)
+  [HACplus+CR/low/treehill] FID=21.1756  CMMD=0.1131  (n_fake_crops=180, n_ref_crops=180)
+Wrote /home/u4546465/iqa_eval/results/HACplus+CR/fivecrop_per_scene.csv
+Wrote /home/u4546465/iqa_eval/results/HACplus+CR/fivecrop_summary.csv

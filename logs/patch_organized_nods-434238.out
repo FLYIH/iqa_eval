@@ -1,0 +1,83 @@
+Discovering views...
+Found 9 scenes, 246 views total
+Building file records (methods={'3DCR', 'Orig'})...
+Total (method,rate,view) records: 1476 (each -> HiFiC two-grid 256x256 patches)
+Computing HiFiC-patch Inception (FID) + CLIP (CMMD) features (no_downsample=True)...
+Loading pretrained model Inception3 from /home/u4546465/.cache/torch/hub/pyiqa/pt_inception-2015-12-05-6726825d.pth
+  ref patches+features [50/246]
+  ref patches+features [100/246]
+  ref patches+features [150/246]
+  ref patches+features [200/246]
+  ref patches+features [246/246]
+  fake patches+features [100/1476]
+  fake patches+features [200/1476]
+  fake patches+features [300/1476]
+  fake patches+features [400/1476]
+  fake patches+features [500/1476]
+  fake patches+features [600/1476]
+  fake patches+features [700/1476]
+  fake patches+features [800/1476]
+  fake patches+features [900/1476]
+  fake patches+features [1000/1476]
+  fake patches+features [1100/1476]
+  fake patches+features [1200/1476]
+  fake patches+features [1300/1476]
+  fake patches+features [1400/1476]
+  fake patches+features [1476/1476]
+Computing per-scene FID + CMMD...
+  [3DCR/high/bicycle] FID=20.8434  CMMD=0.1528  (n_fake_patches=975, n_ref_patches=975)
+  [Orig/high/bicycle] FID=47.8953  CMMD=0.4444  (n_fake_patches=975, n_ref_patches=975)
+  [3DCR/mid/bicycle] FID=23.7336  CMMD=0.1719  (n_fake_patches=975, n_ref_patches=975)
+  [Orig/mid/bicycle] FID=68.8115  CMMD=0.7838  (n_fake_patches=975, n_ref_patches=975)
+  [3DCR/low/bicycle] FID=27.1747  CMMD=0.2350  (n_fake_patches=975, n_ref_patches=975)
+  [Orig/low/bicycle] FID=99.2064  CMMD=1.3585  (n_fake_patches=975, n_ref_patches=975)
+  [3DCR/high/bonsai] FID=21.5066  CMMD=0.1370  (n_fake_patches=1443, n_ref_patches=1443)
+  [Orig/high/bonsai] FID=47.5135  CMMD=0.4963  (n_fake_patches=1443, n_ref_patches=1443)
+  [3DCR/mid/bonsai] FID=25.9271  CMMD=0.1915  (n_fake_patches=1443, n_ref_patches=1443)
+  [Orig/mid/bonsai] FID=57.6807  CMMD=0.6202  (n_fake_patches=1443, n_ref_patches=1443)
+  [3DCR/low/bonsai] FID=32.9496  CMMD=0.2861  (n_fake_patches=1443, n_ref_patches=1443)
+  [Orig/low/bonsai] FID=71.6935  CMMD=0.7763  (n_fake_patches=1443, n_ref_patches=1443)
+  [3DCR/high/counter] FID=43.7772  CMMD=0.3434  (n_fake_patches=1170, n_ref_patches=1170)
+  [Orig/high/counter] FID=79.1807  CMMD=0.7148  (n_fake_patches=1170, n_ref_patches=1170)
+  [3DCR/mid/counter] FID=49.0691  CMMD=0.4200  (n_fake_patches=1170, n_ref_patches=1170)
+  [Orig/mid/counter] FID=92.9814  CMMD=0.9795  (n_fake_patches=1170, n_ref_patches=1170)
+  [3DCR/low/counter] FID=62.1919  CMMD=0.6658  (n_fake_patches=1170, n_ref_patches=1170)
+  [Orig/low/counter] FID=110.7264  CMMD=1.2959  (n_fake_patches=1170, n_ref_patches=1170)
+  [3DCR/high/flowers] FID=33.3787  CMMD=0.3735  (n_fake_patches=858, n_ref_patches=858)
+  [Orig/high/flowers] FID=101.2520  CMMD=1.1958  (n_fake_patches=858, n_ref_patches=858)
+  [3DCR/mid/flowers] FID=36.8940  CMMD=0.4742  (n_fake_patches=858, n_ref_patches=858)
+  [Orig/mid/flowers] FID=118.0696  CMMD=1.4454  (n_fake_patches=858, n_ref_patches=858)
+  [3DCR/low/flowers] FID=42.6799  CMMD=0.6356  (n_fake_patches=858, n_ref_patches=858)
+  [Orig/low/flowers] FID=142.2989  CMMD=1.7108  (n_fake_patches=858, n_ref_patches=858)
+  [3DCR/high/garden] FID=19.6821  CMMD=0.1189  (n_fake_patches=936, n_ref_patches=936)
+  [Orig/high/garden] FID=45.7117  CMMD=0.2191  (n_fake_patches=936, n_ref_patches=936)
+  [3DCR/mid/garden] FID=24.6981  CMMD=0.2788  (n_fake_patches=936, n_ref_patches=936)
+  [Orig/mid/garden] FID=70.7418  CMMD=0.5270  (n_fake_patches=936, n_ref_patches=936)
+  [3DCR/low/garden] FID=31.4562  CMMD=0.4572  (n_fake_patches=936, n_ref_patches=936)
+  [Orig/low/garden] FID=112.3225  CMMD=1.1840  (n_fake_patches=936, n_ref_patches=936)
+  [3DCR/high/kitchen] FID=21.6165  CMMD=0.0904  (n_fake_patches=1365, n_ref_patches=1365)
+  [Orig/high/kitchen] FID=34.5555  CMMD=0.2171  (n_fake_patches=1365, n_ref_patches=1365)
+  [3DCR/mid/kitchen] FID=26.4223  CMMD=0.1274  (n_fake_patches=1365, n_ref_patches=1365)
+  [Orig/mid/kitchen] FID=47.2015  CMMD=0.3418  (n_fake_patches=1365, n_ref_patches=1365)
+  [3DCR/low/kitchen] FID=32.9326  CMMD=0.2091  (n_fake_patches=1365, n_ref_patches=1365)
+  [Orig/low/kitchen] FID=64.4690  CMMD=0.5140  (n_fake_patches=1365, n_ref_patches=1365)
+  [3DCR/high/room] FID=29.4115  CMMD=0.1876  (n_fake_patches=1521, n_ref_patches=1521)
+  [Orig/high/room] FID=57.2801  CMMD=0.5221  (n_fake_patches=1521, n_ref_patches=1521)
+  [3DCR/mid/room] FID=31.7623  CMMD=0.2555  (n_fake_patches=1521, n_ref_patches=1521)
+  [Orig/mid/room] FID=77.6802  CMMD=0.7530  (n_fake_patches=1521, n_ref_patches=1521)
+  [3DCR/low/room] FID=39.1457  CMMD=0.4116  (n_fake_patches=1521, n_ref_patches=1521)
+  [Orig/low/room] FID=91.7276  CMMD=0.9344  (n_fake_patches=1521, n_ref_patches=1521)
+  [3DCR/high/stump] FID=26.4187  CMMD=0.6139  (n_fake_patches=624, n_ref_patches=624)
+  [Orig/high/stump] FID=57.6177  CMMD=0.9109  (n_fake_patches=624, n_ref_patches=624)
+  [3DCR/mid/stump] FID=27.1629  CMMD=0.8147  (n_fake_patches=624, n_ref_patches=624)
+  [Orig/mid/stump] FID=95.3509  CMMD=1.2897  (n_fake_patches=624, n_ref_patches=624)
+  [3DCR/low/stump] FID=33.3826  CMMD=0.9543  (n_fake_patches=624, n_ref_patches=624)
+  [Orig/low/stump] FID=136.5746  CMMD=1.5898  (n_fake_patches=624, n_ref_patches=624)
+  [3DCR/high/treehill] FID=29.2849  CMMD=0.3740  (n_fake_patches=702, n_ref_patches=702)
+  [Orig/high/treehill] FID=109.3984  CMMD=1.1044  (n_fake_patches=702, n_ref_patches=702)
+  [3DCR/mid/treehill] FID=31.8123  CMMD=0.4288  (n_fake_patches=702, n_ref_patches=702)
+  [Orig/mid/treehill] FID=151.6941  CMMD=1.3896  (n_fake_patches=702, n_ref_patches=702)
+  [3DCR/low/treehill] FID=39.1959  CMMD=0.6500  (n_fake_patches=702, n_ref_patches=702)
+  [Orig/low/treehill] FID=195.1664  CMMD=1.6618  (n_fake_patches=702, n_ref_patches=702)
+Wrote /home/u4546465/iqa_eval/results/patch_nodownsample_per_scene.csv
+Wrote /home/u4546465/iqa_eval/results/patch_nodownsample_summary.csv

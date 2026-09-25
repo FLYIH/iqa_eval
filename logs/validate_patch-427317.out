@@ -1,0 +1,10 @@
+Validating custom Inception pipeline against pyiqa.create_metric('fid')...
+Loading pretrained model Inception3 from /home/u4546465/.cache/torch/hub/pyiqa/pt_inception-2015-12-05-6726825d.pth
+Computing FID between two folders
+Found 4 images in the folder /tmp/tmpzdbxn38i/a
+Found 4 images in the folder /tmp/tmpzdbxn38i/b
+Loading pretrained model Inception3 from /home/u4546465/.cache/torch/hub/pyiqa/pt_inception-2015-12-05-6726825d.pth
+  pyiqa official FID  = 12.524793
+  custom reimpl FID   = 12.505410
+  relative error      = 0.154754%
+  OK: reimplementation matches pyiqa's official FID.

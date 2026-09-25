@@ -1,0 +1,37 @@
+Discovering views...
+Found 9 scenes, 246 views total
+Building file records (methods=ALL)...
+Total (method,view) records: 492 (each -> HiFiC two-grid 256x256 patches)
+Computing HiFiC-patch Inception (FID) + CLIP (CMMD) features (no_downsample=False)...
+Loading pretrained model Inception3 from /home/u4546465/.cache/torch/hub/pyiqa/pt_inception-2015-12-05-6726825d.pth
+  ref patches+features [50/246]
+  ref patches+features [100/246]
+  ref patches+features [150/246]
+  ref patches+features [200/246]
+  ref patches+features [246/246]
+  fake patches+features [100/492]
+  fake patches+features [200/492]
+  fake patches+features [300/492]
+  fake patches+features [400/492]
+  fake patches+features [492/492]
+Computing per-scene FID + CMMD...
+  [perceptual/bicycle] FID=21.9209  CMMD=0.1216  (n_fake_patches=975, n_ref_patches=975)
+  [perceptual_3dcr/bicycle] FID=18.6172  CMMD=0.1514  (n_fake_patches=975, n_ref_patches=975)
+  [perceptual/bonsai] FID=31.8868  CMMD=0.2984  (n_fake_patches=1443, n_ref_patches=1443)
+  [perceptual_3dcr/bonsai] FID=14.8286  CMMD=0.1807  (n_fake_patches=1443, n_ref_patches=1443)
+  [perceptual/counter] FID=41.8125  CMMD=0.2562  (n_fake_patches=1170, n_ref_patches=1170)
+  [perceptual_3dcr/counter] FID=25.3204  CMMD=0.1417  (n_fake_patches=1170, n_ref_patches=1170)
+  [perceptual/flowers] FID=55.5422  CMMD=0.2866  (n_fake_patches=858, n_ref_patches=858)
+  [perceptual_3dcr/flowers] FID=30.3273  CMMD=0.2772  (n_fake_patches=858, n_ref_patches=858)
+  [perceptual/garden] FID=20.1070  CMMD=0.1112  (n_fake_patches=936, n_ref_patches=936)
+  [perceptual_3dcr/garden] FID=11.9248  CMMD=0.0964  (n_fake_patches=936, n_ref_patches=936)
+  [perceptual/kitchen] FID=20.4511  CMMD=0.1180  (n_fake_patches=1365, n_ref_patches=1365)
+  [perceptual_3dcr/kitchen] FID=16.2841  CMMD=0.0901  (n_fake_patches=1365, n_ref_patches=1365)
+  [perceptual/room] FID=38.0536  CMMD=0.3020  (n_fake_patches=1521, n_ref_patches=1521)
+  [perceptual_3dcr/room] FID=21.0614  CMMD=0.1107  (n_fake_patches=1521, n_ref_patches=1521)
+  [perceptual/stump] FID=29.3877  CMMD=0.4565  (n_fake_patches=624, n_ref_patches=624)
+  [perceptual_3dcr/stump] FID=25.5817  CMMD=0.3531  (n_fake_patches=624, n_ref_patches=624)
+  [perceptual/treehill] FID=68.5097  CMMD=0.4047  (n_fake_patches=702, n_ref_patches=702)
+  [perceptual_3dcr/treehill] FID=45.6007  CMMD=0.4098  (n_fake_patches=702, n_ref_patches=702)
+Wrote /home/u4546465/iqa_eval/results/Perceptual_gs/patch_per_scene.csv
+Wrote /home/u4546465/iqa_eval/results/Perceptual_gs/patch_summary.csv
